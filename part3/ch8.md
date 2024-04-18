@@ -1,4 +1,6 @@
 # 🎯 08장. 도약
+> [이 장에 대한 PPT 자료](https://www.slideshare.net/kukuman/domain-driven-design-8)
+
 > 개인적으로 "도약"이 무슨 의미인지 궁금해서 챗GPT에 물어봤어요!
 <img width="630" alt="스크린샷 2024-03-30 오후 6 51 41" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/cb161b84-a527-4d7e-9a20-2834bd69824b">
 
