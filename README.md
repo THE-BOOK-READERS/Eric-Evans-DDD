@@ -6,6 +6,9 @@
  <img width="300px" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/20085849/5a92ab4b-9e91-41f5-b413-59958ee4620f">
 </p>
 
+# 책 PPT 자료
+- https://github.com/andstudy/forge/wiki/domain-driven-design#%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C
+
 # 포스팅
 
 ## 01부 동작하는 도메인 모델 만들기
