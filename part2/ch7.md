@@ -1,5 +1,5 @@
 # 🎯 07장. 언어의 사용(확장 예제)
-> [PPT 자료](https://www.slideshare.net/parkpd/domain-driven-design-ch7)
+> [이 장에 대한 PPT 자료](https://www.slideshare.net/parkpd/domain-driven-design-ch7)
 
 ## 🎈 화물 해운 시스템 소개
 
