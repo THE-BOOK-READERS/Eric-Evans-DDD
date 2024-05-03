@@ -49,7 +49,33 @@ Therefore:
 ## 5.3 Generic Subdomains
 ## 5.4 Domain Vision Statement
 ## 5.5 Highlighted Core
-## 5.6 Cohesive Mechanisms
+## 5.6 Cohesive Mechanisms(응집력 있는 메커니즘)
+> Computations sometimes reach a level of complexity that begins to bloat the design. The conceptual “what” is swamped by the mechanistic “how.” A large number of methods that provide algorithms for resolving the problem obscure the methods that express the problem.
+- 가끔 계산이 너무 복잡해져서 설계를 부풀리기 시작하는 경우도 있다.
+- 개념적으로 중심이 되는 "무엇(what)"이 기계적인 "어떻게(how)"에 묻혀 버리는 경우도 있다.
+- 문제를 해결하기 위한 알고리즘을 제공하는 많은 방법들이 문제를 표현하는 방법들을 모호하게 한다.
+
+Therefore:
+- 그러므로,
+
+> Partition a conceptually cohesive mechanism into a separate lightweight framework. Particularly watch for formalisms or well-documented categories of algorithms. Expose the capabilities of the framework with an intention-revealing interface. Now the other elements of the domain can focus on expressing the problem (“what”), delegating the intricacies of the solution (“how”) to the framework.
+
+- 개념적으로 응집력 있는 메커니즘을 별도의 경량 프레임워크로 분할해라.
+- 특히, 형식주의 또는 잘 문서화된 알고리즘 카테고리를 주의 깊게 살펴봐라.
+- 의도를 드러내는 인터페이스를 통해 프레임워크의 기능을 노출시켜라.
+- 이제 도메인의 다른 요소들은 문제("무엇")를 표현하는 데 집중할 수 있으며, 프레임워크에 해결책("어떻게")의 복잡성을 위임한다.
+
+> Factoring out generic subdomains reduces clutter, and cohesive mechanisms serve to encapsulate complex operations. This leaves behind a more focused model, with fewer distractions that add no particular value to the way users conduct their activities. But you are unlikely ever to find good homes for everything in the domain model that is not core. The segregated core takes a direct approach to structurally marking off the core domain.
+
+- 일반적인 서브도메인을 나누면 혼란이 줄어들고, 응집력 있는 메커니즘은 복잡한 operation을 캡슐화하는 역할을 한다.
+- 이로써 더 집중된 모델이 만들어지고, 사용자가 활동을 수행하는 방법에 특별한 가치를 추가하지 않는 방해 요소들이 줄어든다.
+- 그러나, 핵심이 되지 않는 도메인 모델의 모든 것에 대해 항상 적절한 곳에 찾을 수는 없다.
+- 분리된 핵심은 핵심 도메인을 구조적으로 표시하는 직접적인 접근 방식을 취한다.
+
+
+
+
+
 ## 5.7 Segregated Core
 ## 5.8 Abstract Core
 
