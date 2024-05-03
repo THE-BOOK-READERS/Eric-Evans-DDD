@@ -14,7 +14,6 @@
 - 다양한 부분의 역할이 전체를 어떻게 형성하는지에 대한 큰 그림에 대해 공유된 개념이 있기 때문에, 독립적인 작업을 조율하는데 도움이 된다.
 
 
-
 Therefore:
 
 > Devise a pattern of rules or roles and relationships that will span the entire system and that allows some understanding of each part’s place in the whole—even without detailed knowledge of the part’s responsibility.
@@ -49,8 +48,49 @@ Therefore:
 - 다음은 일부 프로젝트에서 나타나고 이러한 종류의 패턴을 대표하는 대규모 구조의 4가지 특정 패턴 세트입니다.
 
 ## 6.3 System Metaphor
+> Metaphorical thinking is pervasive in software development, especially with models. But the Extreme Programming practice of “metaphor” has come to mean a particular way of using a metaphor to bring order to the development of a whole system.
+Software designs tend to be very abstract and hard to grasp. Developers and users alike need tangible ways to understand the system and share a view of the system as a whole.
+
+- 은유적 사고는 소프트웨어 개발, 특히 모델에 널리 퍼져 있다.
+- 그러나 "은유"라는 익스트림 프로그래밍 방식은 전체 시스템 개발에 질서를 부여하기 위해 은유를 사용하는 특별한 방식을 의미하게 되었다.
+- 소프트웨어 디자인은 매우 추상적이고 이해하기 어려운 경향이 있다.
+- 개발자와 사용자 모두 시스템을 이해하고 시스템 전체에 대한 관점을 공유할 수 있는 실질적인 방법이 필요하다.
+
+Therefore:
+
+> When a concrete analogy to the system emerges that captures the imagination of team members and seems to lead thinking in a useful direction, adopt it as a large-scale structure. Organize the design around this metaphor and absorb it into the ubiquitous language. The system metaphor should both facilitate communication about the system and guide development of it. This increases consistency in different parts of the system, potentially even across different bounded contexts. But because all metaphors are inexact, continually reexamine the metaphor for overextension or inaptness, and be ready to drop it if it gets in the way.
+
+- 팀 구성원의 상상력을 포착하고 사고를 유용한 방향으로 이끄는 것처럼 보이는 시스템에 대한 구체적인 비유가 나타나면 이를 대규모 구조로 채택한다.
+- 이 은유를 중심으로 설계을 구성하고 이를 유비쿼터스 언어로 흡수한다.
+- 시스템 은유는 시스템에 대한 의사소통을 촉진하고 시스템 개발을 안내해야 한다.
+- 이는 잠재적으로 서로 다른 bounded context 전반에 걸쳐 시스템의 여러 부분에서 일관성을 향상시킨다.
+- 그러나 모든 은유는 정확하지 않기 때문에 은유의 과도한 확장이나 부적절함을 지속적으로 재검토하고 방해가 된다면 버릴 준비를 해라.
+
 
 ## 6.4 Responsibility Layers
+> In object-oriented design, individual objects are assigned narrow sets of related responsibilities. Responsibility-driven design also applies to larger scales.
+
+
+- 객체 지향 디자인에서는 개별 객체에 관련 책임의 좁은 집합이 할당된다.
+- 책임 중심 설계는 더 큰 규모에도 적용된다.
+
+> When each individual object has handcrafted responsibilities, there are no guidelines, no uniformity, and no ability to handle large swaths of the domain together. To give coherence to a large model, it is useful to impose some structure on the assignment of those responsibilities.
+
+- 각 개별 객체마다 수작업으로 책임을 부여하는 경우, 지침도 없고 통일성도 없으며 도메인의 넓은 범위를 함께 처리할 수 있는 능력도 없다.
+- 대규모 모델에 일관성을 부여하려면, 이러한 책임 할당에 일부 구조를 적용하는 것이 유용하다.
+
+
+Therefore:
+
+> Look at the conceptual dependencies in your model and the varying rates and sources of change of different parts of your domain. If you identify natural strata in the domain, cast them as broad abstract responsibilities. These responsibilities should tell a story of the high-level purpose and design of your system. Refactor the model so that the responsibilities of each domain object, aggregate, and module fit neatly within the responsibility of one layer.
+
+- 모델의 개념적 의존성과 도메인의 다양한 부분의 변화율과 변화 소스를 살펴봐라.
+- 도메인에서 자연스러운 계층을 식별하는 경우, 이를 광범위한 추상적인 책임으로 캐스팅해라.
+- 이러한 책임은 시스템의 고수준의 목적과 설계에 대한 이야기를 전달해야 한다.
+- 각 도메인 개체, 집계 및 모듈의 책임이 한 계층의 책임 내에 깔끔하게 맞도록 모델을 리팩터링해라.
+
+
+
 
 ## 6.5 Knowledge Level
 
