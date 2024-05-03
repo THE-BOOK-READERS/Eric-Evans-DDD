@@ -30,7 +30,8 @@ Therefore:
 > Boil the model down. Define a core domain and provide a means of easily distinguishing it from the mass of supporting model and code. Bring the most valuable and specialized concepts into sharp relief. Make the core small.
 - 도메인을 끓여라!
 - 핵심 도메인을 정의하고, 그것과 그것을 지원하는 모델 및 코드의 덩어리를 쉽게 구별할 수 있는 수단을 제공해라.
-
+- 가장 가치 있고 전문적인 개념을 날카로운 구조(sharp relief)로 가져와라. 
+- 코어를 작게 만들어라.
 
 > Apply top talent to the core domain, and recruit accordingly. Spend the effort in the core to find a deep model and develop a supple design—sufficient to fulfill the vision of the system.
 
