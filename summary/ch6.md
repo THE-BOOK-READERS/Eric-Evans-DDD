@@ -114,4 +114,20 @@ Therefore:
 
 
 ## 6.6 Pluggable Component Framework
+> Opportunities arise in a very mature model that is deep and distilled. A pluggable component framework usually only comes into play after a few applications have already been implemented in the same domain.
 
+- 기회는 깊고 정제된 매우 성숙한 모델에서 발생한다.
+- 플러그형 컴포넌트 프레임워크는 일반적으로 동일한 도메인에서 몇 가지 애플리케이션이 이미 구현된 후에만 작동한다.
+
+> When a variety of applications have to interoperate, all based on the same abstractions but designed independently, translations between multiple bounded contexts limit integration. A shared kernel is not feasible for teams that do not work closely together. Duplication and fragmentation raise costs of development and installation, and interoperability becomes very difficult.
+
+- 다양한 애플리케이션이 모두 동일한 추상화를 기반으로 하지만, 독립적으로 설계되어 상호 운용되어야 하는 경우, 여러 bounded contexts 간의 번역으로 인해 통합이 제한된다.
+- 긴밀하게 협력하지 않는 팀에게는 공유 커널이 적합하지 않다.
+- 복제와 단편화로 인해 개발 및 설치 비용이 증가하고 상호 운용성이 매우 어려워진다.
+
+Therefore:
+
+> Distill an abstract core of interfaces and interactions and create a framework that allows diverse implementations of those interfaces to be freely substituted. Likewise, allow any application to use those components, so long as it operates strictly through the interfaces of the abstract core.
+
+- 인터페이스와 상호 작용의 추상적인 핵심을 추출하고 해당 인터페이스의 다양한 구현을 자유롭게 대체할 수 있는 프레임워크를 만든다.
+- 마찬가지로 추상 코어의 인터페이스를 통해 엄격하게 작동하는 한, 모든 애플리케이션에서 이러한 구성 요소를 사용할 수 있도록 허용해라.
