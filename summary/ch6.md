@@ -23,6 +23,30 @@ Therefore:
 
 
 ## 6.2 Evolving Order(진화하는 질서)
+> Design free-for-alls produce systems no one can make sense of as a whole, and they are very
+difficult to maintain. But architectures can straitjacket a project with up-front design assumptions and take too much power away from the developers/designers of particular parts of the application. Soon, developers will dumb down the application to fit the structure, or they will subvert it and have no structure at all, bringing back the problems of uncoordinated development.
+
+- free-for-alls 설계는 전체적으로 이해하기 어려운 시스템을 만들어내며, 이는 유지보수하기 매우 어렵다.
+- 그러나, 아키텍처는 프로젝트에 전반적인 설계 가정을 미리 내재화함으로써 특정 부분의 개발자/설계자로부터 너무 많은 권한을 빼앗아 버릴 수 있다.
+- 곧 개발자들은 구조에 맞추기 위해 애플리케이션을 단순화하거나, 그것을 교란하고 구조 자체가 없게 되어 조율되지 않은 개발 문제를 다시 가져올 것입니다.
+
+Therefore:
+
+> Let this conceptual large-scale structure evolve with the application, possibly changing to a completely different type of structure along the way. Don’t over constrain the detailed design and model decisions that must be made with detailed knowledge.
+
+- 이 개념적 대규모 구조를 애플리케이션과 함께 발전시키게 하여, 그 과정에서 완전히 다른 유형의 구조로 변경될 수도 있도록 한다.
+- 상세한 지식을 바탕으로 내려야 하는 세부 설계 및 모델을 과도하게 제한하지 마라.
+  
+
+> Large-scale structure should be applied when a structure can be found that greatly clarifies the system without forcing unnatural constraints on model development. Because an ill- fitting structure is worse than none, it is best not to shoot for comprehensiveness, but rather to find a minimal set that solves the problems that have emerged. Less is more.
+
+- 대규모 구조는 모델 개발에 부자연스러운 제약을 강요하지 않으면서도, 시스템을 크게 명확하게 하는 구조가 발견될 때 적용해야 한다.
+- 부적합한 구조는 없는 것보다 나쁘기 때문에, 포괄성을 목표로 삼기보다는 발생한 문제를 해결하는 최소한의 집합을 찾는 것이 가장 좋다. 적을수록 더 좋다.
+
+
+> What follows is a set of four particular patterns of large-scale structure that emerge on some projects and are representative of this kind of pattern.
+
+- 다음은 일부 프로젝트에서 나타나고 이러한 종류의 패턴을 대표하는 대규모 구조의 4가지 특정 패턴 세트입니다.
 
 ## 6.3 System Metaphor
 
