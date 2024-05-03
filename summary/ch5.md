@@ -25,7 +25,6 @@
 
 
 Therefore:
-- 그러므로,
 
 > Boil the model down. Define a core domain and provide a means of easily distinguishing it from the mass of supporting model and code. Bring the most valuable and specialized concepts into sharp relief. Make the core small.
 - 도메인을 끓여라!
@@ -56,7 +55,6 @@ Therefore:
 - 문제를 해결하기 위한 알고리즘을 제공하는 많은 방법들이 문제를 표현하는 방법들을 모호하게 한다.
 
 Therefore:
-- 그러므로,
 
 > Partition a conceptually cohesive mechanism into a separate lightweight framework. Particularly watch for formalisms or well-documented categories of algorithms. Expose the capabilities of the framework with an intention-revealing interface. Now the other elements of the domain can focus on expressing the problem (“what”), delegating the intricacies of the solution (“how”) to the framework.
 
@@ -83,7 +81,6 @@ Therefore:
 - 설계자들은 가장 중요한 관계를 명확하게 볼 수 없어, 설계가 약해지는 결과를 초래할 수 있다.
 
 Therefore:
-- 그러므로,
 
 > Refactor the model to separate the core concepts from supporting players (including ill- defined ones) and strengthen the cohesion of the core while reducing its coupling to other code. Factor all generic or supporting elements into other objects and place them into other packages, even if this means refactoring the model in ways that separate highly coupled elements.
 
@@ -91,8 +88,17 @@ Therefore:
 - 비록 그것이 고도로 결합력이 높은 요소를 분리하는 방식으로 모델을 리패토링하는 것을 의미하더라도, 모든 일반적 요소(=일반 도메인) 또는 지원 요소들(=지원 도메인)을 다른 객체로 분리하고, 이를 다른 패키지에 배치해라.
 
 
-
-
 ## 5.8 Abstract Core
+> Even the core domain model usually has so much detail that communicating the big picture can be difficult.
+- 핵심 도메인 모델조차도 대개 상세한 내용이 많아서 전체적인 그림을 전달하는 것이 어려울 수 있다.
 
+> When there is a lot of interaction between subdomains in separate modules, either many references will have to be created between modules, which defeats much of the value of the partitioning, or the interaction will have to be made indirect, which makes the model obscure.
+- 분리된 모듈 사이의 서브도메인 간 상호작용이 많은 경우, 모듈 간에 많은 참조가 생성되어야 하며, 이는 분할의 많은 가치를 상실시킵니다. 또는 상호작용을 간접적으로 만들어야 하며, 이는 모델을 어렵게 만듭니다.
 
+Therefore:
+
+> Identify the most fundamental differentiating concepts in the model and factor them into distinct classes, abstract classes, or interfaces. Design this abstract model so that it expresses most of the interaction between significant components. Place this abstract overall model in its own module, while the specialized, detailed implementation classes are left in their own modules defined by subdomain.
+- 모델에서 가장 기본적인 차별화되는 개념을 식별하고, 이를 별도의 클래스, 추상 클래스 또는 인터페이스로 분리해라. 
+- 중요한 컴포너트 간의 상호 작용을 대부분 표현하도록 이 추상 모델을 설계해라.
+- 이런 추상적인 전체 모델을 그 자체 모듈에 배치하는 반면, 전문화되고 상세한 구현 클래스는 하위 도메인에 의해 정의된 자신의 모듈에 남겨둬라.
+  
