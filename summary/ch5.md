@@ -64,7 +64,35 @@ Therefore:
 - 또한 이러한 일반 서브도메인에 대해 외부 솔루션이나 출판된 모델을 고려해라.
 
 
-## 5.4 Domain Vision Statement
+## 5.4 Domain Vision Statement (도메인 비전 선언문)
+> At the beginning of a project, the model usually doesn’t even exist, yet the need to focus its development is already there. In later stages of development, there is a need for an explanation of the value of the system that does not require an in-depth study of the model. Also, the critical aspects of the domain model may span multiple bounded contexts, but by definition these distinct models can’t be structured to show their common focus.
+
+- 프로젝트 초기에는 모델이 실제로 존재하지 않을 수 있지만, 모델 개발에 집중할 필요성은 이미 존재한다.
+- 개발의 후반부에는, 모델에 대한 심층적인 연구가 필요하지 않는 시스템의 가치를 설명할 필요가 있다.
+- 또한, 도메인 모델의 중요한 측면은 여러 개의 bounded context에 걸쳐 있을 수 있지만, 정의에 따르면, 이러한 개별 모델은 공통 초점을 보여주도록 구조화될 수 없다.
+
+Therefore:
+
+> Write a short description (about one page) of the core domain and the value it will bring, the “value proposition.” Ignore those aspects that do not distinguish this domain model from others. Show how the domain model serves and balances diverse interests. Keep it narrow. Write this statement early and revise it as you gain new insight.
+
+- 핵심 도메인과 그것이 가져올 가치, 즉 "가치 제안"에 대해 약 1페이지 분량으로 간단한 설명을 작성해라.
+- 이 도메인 모델을 다른 모델들과 구별하지 않는 측면은 무시해라.
+- 도메인 모델이 어떻게 다양한 이익을 제공하고 균형을 이루는지에 대해 보여줘라.
+- 그것을 좁게 유지해라.
+- 이 문장을 초기에 작성하고 새로운 통찰력을 얻을 때마다 수정해라.
+
+
+
+> 예를 들어, 온라인 도서 판매 플랫폼의 도메인 비전 문장은 다음과 같을 수 있습니다: <br>
+> "우리의 도메인 비전은 독자들에게 쉽고 편리한 방식으로 책을 발견하고 구매할 수 있는 세련되고 직관적인 온라인 도서 매장을 제공하는 것입니다. 우리는 독자들에게 다양한 장르와 주제의 책을 제공하며, 편리한 검색 및 추천 기능을 통해 독자들이 원하는 책을 쉽게 찾을 수 있도록 합니다. 또한 우리는 저작권자들에게 자신들의 작품을 홍보하고 판매할 수 있는 플랫폼을 제공하여, 창작자들과 독자들 간의 연결을 촉진합니다."
+
+
+
+
+
+
+
+
 ## 5.5 Highlighted Core
 ## 5.6 Cohesive Mechanisms(응집력 있는 메커니즘)
 > Computations sometimes reach a level of complexity that begins to bloat the design. The conceptual “what” is swamped by the mechanistic “how.” A large number of methods that provide algorithms for resolving the problem obscure the methods that express the problem.
