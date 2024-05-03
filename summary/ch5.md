@@ -87,13 +87,61 @@ Therefore:
 > "우리의 도메인 비전은 독자들에게 쉽고 편리한 방식으로 책을 발견하고 구매할 수 있는 세련되고 직관적인 온라인 도서 매장을 제공하는 것입니다. 우리는 독자들에게 다양한 장르와 주제의 책을 제공하며, 편리한 검색 및 추천 기능을 통해 독자들이 원하는 책을 쉽게 찾을 수 있도록 합니다. 또한 우리는 저작권자들에게 자신들의 작품을 홍보하고 판매할 수 있는 플랫폼을 제공하여, 창작자들과 독자들 간의 연결을 촉진합니다."
 
 
-
-
-
-
-
-
 ## 5.5 Highlighted Core
+> A domain vision statement identifies the core domain in broad terms, but it leaves the identification of the specific core model elements up to the vagaries of individual interpretation. Unless there is an exceptionally high level of communication on the team, the vision statement alone will have little impact.
+
+- 도메인 비전 선언문은 핵심 도메인을 넓은 의미로 식별하지만, 구체적인 핵심 모델 요소의 식별은 개인의 해석에 달려있다. 
+- 팀 내에서 예외적으로 높은 수준의 의사소통이 이루어지지 않는다면, 비전 선언문 자체만으로는 거의 영향을 미치지 않을 것이다.
+
+
+> Even though team members may know broadly what constitutes the core domain, different people won’t pick out quite the same elements, and even the same person won’t be consistent from one day to the next. The mental labor of constantly filtering the model to identify the key parts absorbs concentration better spent on design thinking, and it requires comprehensive knowledge of the model. The core domain must be made easier to see.
+
+- 팀 구성원들은 핵심 도메인이 무엇으로 이루어져 있는지 대체로 알고 있더라도, 서로 다른 사람들은 조금씩 다른 요소를 선택할 것이며, 심지어 같은 사람도 하루하루 일관되지 않을 수 있다
+- 핵심 부품을 식별하기 위해 모델을 지속적으로 필터링하는 정신 노동은 설계 사고에 더 잘 집중하도록 해주고, 그것은 모델의 포괄적인 지식을 요구한다.
+- 핵심 도메인은 더 쉽게 볼 수 있도록 만들어져야 한다.
+
+
+> Significant structural changes to the code are the ideal way of identifying the core domain, but they are not always practical in the short term. In fact, such major code changes are difficult to undertake without the very view the team is lacking.
+
+- 코드에 대규모 구조적 변경은 핵심 도메인을 식별하는 이상적인 방법이지만, 단기적으로는 항상 실현 가능한 것은 아니다.
+- 실제로, 이러한 주요 코드 변경은 팀이 부족한 시각을 가진 채로는 실시하기가 어렵습니다.
+
+
+> Therefore (as one form of highlighted core):
+
+- 그러므로 (강조된 핵심의 한 형태로):
+
+> Write a very brief document (three to seven sparse pages) that describes the core domain and the primary interactions among core elements.
+
+- 핵심 도메인과 핵심 요소 간의 주요 상호 작용을 설명하는 매우 간결한 문서를 약 3~7 페이지 분량으로 작성해라.
+
+
+> and/or (as another form of highlighted core):
+
+- 또는 (다른 형태의 강조된 핵심으로):
+
+
+> Flag the elements of the core domain within the primary repository of the model, without particularly trying to elucidate its role. Make it effortless for a developer to know what is in or out of the core.
+
+- 특별히 그것의 역할을 명확히 설명 없이도, 주요 모델 저장소 내에서 핵심 도메인 요소를 표시해라.
+- 개발자가 핵심 부분이 무엇인지 쉽게 알 수 있도록 만들어라.
+
+
+> If the distillation document outlines the essentials of the core domain, then it serves as a practical indicator of the significance of a model change. When a model or code change affects the distillation document, it requires consultation with other team members. When the change is made, it requires immediate notification of all team members, and the dissemination of a new version of the document. Changes outside the core or to details not included in the distillation document can be integrated without consultation or notification and will be encountered by other members in the course of their work. Then the developers have the full autonomy that most Agile processes suggest.
+
+- distillation 문서가 핵심 도메인의 필수 사항에 대해 개요를 잡아준다면, 이는 모델 변경의 중요성을 나타내는 실질적인 지표 역할을 한다.
+- 모델 또는 코드 변경이 distillation 문서에 영향을 미치는 경우, 다른 팀 구성원과의 협의가 필요하다.
+- 변경이 이루어지면 즉시 모든 팀 구성원에게 통보되어야 하며, 문서의 새 버전을 배포해야 합니다.
+- 핵심 부분 밖의 변경 사항이나distillation농축 문서에 포함되지 않은 세부 사항의 변경 사항은 협의나 통보 없이 통합될 수 있으며, 다른 구성원이 작업 중에 마주치게 될 것이다.
+- 그때, 개발자들은 대부분의 Agile 프로세스에서 제안하는 것처럼 완전한 자율성을 가진다.
+
+> Although the vision statement and highlighted core inform and guide, they do not actually modify the model or the code itself. Partitioning generic subdomains physically removes some distracting elements. Next we’ll look at other ways to structurally change the model and the design itself to make the core domain more visible and manageable. . . .
+
+- 비전 선언문 및 강조된 핵심은 정보와 가이드를 제공하지만, 실제로 모델이나 코드 자체를 수정하지는 않는다.
+- 일반 하위 도메인을 물리적으로 분리하면, 몇 가지 방해 요소가 물리적으로 제거된다.
+- 다음으로는 핵심 도메인을 보다 가시적이고 관리하기 쉽게 만들기 위해, 모델 및 설계 자체를 구조적으로 변경하는 다른 방법을 살펴보자.
+
+
 ## 5.6 Cohesive Mechanisms(응집력 있는 메커니즘)
 > Computations sometimes reach a level of complexity that begins to bloat the design. The conceptual “what” is swamped by the mechanistic “how.” A large number of methods that provide algorithms for resolving the problem obscure the methods that express the problem.
 - 가끔 계산이 너무 복잡해져서 설계를 부풀리기 시작하는 경우도 있다.
