@@ -68,7 +68,7 @@ Therefore:
 ## 5.5 Highlighted Core
 ## 5.6 Cohesive Mechanisms(응집력 있는 메커니즘)
 > Computations sometimes reach a level of complexity that begins to bloat the design. The conceptual “what” is swamped by the mechanistic “how.” A large number of methods that provide algorithms for resolving the problem obscure the methods that express the problem.
-- 가끔 계산이 너무 복잡해져서 설계를 부풀리기 시작하는 경우도 있다.
+- 가끔 계산이 너무 복잡해져서 설계를 부풀리기 시작하는 경우도 있다.
 - 개념적으로 중심이 되는 "무엇(what)"이 기계적인 "어떻게(how)"에 묻혀 버리는 경우도 있다.
 - 문제를 해결하기 위한 알고리즘을 제공하는 많은 방법들이 문제를 표현하는 방법들을 모호하게 한다.
 
