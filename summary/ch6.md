@@ -90,9 +90,28 @@ Therefore:
 - 각 도메인 개체, 집계 및 모듈의 책임이 한 계층의 책임 내에 깔끔하게 맞도록 모델을 리팩터링해라.
 
 
-
-
 ## 6.5 Knowledge Level
+> A group of objects that describe how another group of objects should behave.
+- 다른 그룹의 객체들이 어떻게 동작해야 하는지를 설명하는 객체 그룹이다.
+
+
+> In an application in which the roles and relationships between entities vary in different situations, complexity can explode. Neither fully general models nor highly customized ones serve the users’ needs. Objects end up with references to other types to cover a variety of cases, or with attributes that are used in different ways in different situations. Classes that have the same data and behavior may multiply just to accommodate different assembly rules.
+
+- 상황에 따라 엔터티 간의 역할과 관계가 달라지는 애플리케이션에서는 복잡성이 폭발적으로 증가할 수 있다.
+- 완전히 일반적인 모델이나 고도로 맞춤화된 모델은 사용자의 요구 사항을 충족하지 못한다.
+- 객체들은 다양한 경우를 포괄하기 위해 다른 유형을 대한 참조하거나, 다양한 상황에서 다양한 방식으로 사용되는 속성을 갖게 된다. 
+- 데이터와 동작이 동일한 클래스들은 다른 조립 규칙을 수용하기 위해 증가할 수 있다.
+
+
+Therefore:
+
+> Create a distinct set of objects that can be used to describe and constrain the structure and behavior of the basic model. Keep these concerns separate as two “levels,” one very concrete, the other reflecting rules and knowledge that a user or super-user is able to customize.
+
+- 기본 모델의 구조와 동작을 설명하고 제한할 수 있는 고유한 객체 집합을 만들어라.
+- 이러한 관심사를 2개의 수준으로 분리하도록 유지해라.
+- 하나는 매우 구체적이고, 다른 하나는 사용자 또는 슈퍼 사용자가 사용자 정의할 수 있는 규칙과 지식을 반영하는 것이다.
+
+
 
 ## 6.6 Pluggable Component Framework
 
