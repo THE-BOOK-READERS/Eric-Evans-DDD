@@ -73,10 +73,26 @@ Therefore:
 - 분리된 핵심은 핵심 도메인을 구조적으로 표시하는 직접적인 접근 방식을 취한다.
 
 
-
-
-
 ## 5.7 Segregated Core
+> Elements in the model may partially serve the core domain and partially play supporting roles. Core elements may be tightly coupled to generic ones. The conceptual cohesion of the core may not be strong or visible. All this clutter and entanglement chokes the core. Designers can’t clearly see the most important relationships, leading to a weak design.
+
+- 모델 내의 요소들은 부분적으로 핵심 도메인을 제공하고, 부분적으로 supporting 역할을 합니다.
+- 핵심 요소들은 일반적인 요소들과 강하게 결합될 수 있다.
+- 핵심의 개념적 응집력이 강하지 않거나 명확하지 않을 수 있다.
+- 이 모든 혼란과 엉킴은 핵심을 질식시킨다.
+- 설계자들은 가장 중요한 관계를 명확하게 볼 수 없어, 설계가 약해지는 결과를 초래할 수 있다.
+
+Therefore:
+- 그러므로,
+
+> Refactor the model to separate the core concepts from supporting players (including ill- defined ones) and strengthen the cohesion of the core while reducing its coupling to other code. Factor all generic or supporting elements into other objects and place them into other packages, even if this means refactoring the model in ways that separate highly coupled elements.
+
+- 핵심 개념을 지원 요소들(불명확한 요소 포함)과 분리하고, 핵심 개념의 응집력을 강화하는 동시에 다른 코드와의 결합을 줄이도록 모델을 리팩토링해라. 
+- 비록 그것이 고도로 결합력이 높은 요소를 분리하는 방식으로 모델을 리패토링하는 것을 의미하더라도, 모든 일반적 요소(=일반 도메인) 또는 지원 요소들(=지원 도메인)을 다른 객체로 분리하고, 이를 다른 패키지에 배치해라.
+
+
+
+
 ## 5.8 Abstract Core
 
 
