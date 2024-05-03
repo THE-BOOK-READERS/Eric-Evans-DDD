@@ -42,10 +42,28 @@ Therefore:
 - distilled 된 핵심을 어떻게 지원하느냐에 따라 다른 부분에 대한 투자를 정당화시켜라
 
 
-
-
-
 ## 5.3 Generic Subdomains
+> Some parts of the model add complexity without capturing or communicating specialized knowledge. Anything extraneous makes the core domain harder to discern and understand. The model clogs up with general principles everyone knows or details that belong to specialties which are not your primary focus but play a supporting role. Yet, however generic, these other elements are essential to the functioning of the system and the full expression of the model.
+
+- 모델의 일부는 전문 지식을 포착하거나 전달하지 않으면서 복잡성을 추가시킨다.
+- 관련성 없는 모든 것들은 핵심 도메인을 식별하고 이해하는 것을 어렵게 만든다.
+- 모델은 모든 사람이 알고 있는 `일반 원칙` 또는 주요 초점은 아니지만 supporting 역할을 하는 `전문 분야`에 대해 세부사항으로 가득차 있다.
+- 하지만, 아무리 일반적이더라도, 이러한 다른 요소들은 시스템의 기능과 모델의 완전한 표현에 필수적이다.
+
+Therefore:
+
+> Identify cohesive subdomains that are not the motivation for your project. Factor out generic models of these subdomains and place them in separate modules. Leave no trace of your specialties in them.
+
+- 프로젝트의 motivation이 아닌 응집력 있는 서브도메인을 식별해라.
+- 이러한 서브도메인의 일반적인 모델을 추출하여 별도의 모듈에 배치해라.
+- 그것들 안에 전문 지식의 흔적을 남기지 마라.
+
+> Once they have been separated, give their continuing development lower priority than the core domain, and avoid assigning your core developers to the tasks (because they will gain little domain knowledge from them). Also consider off-the-shelf solutions or published models for these generic subdomains.
+
+- 이들을 분리한 후, 이들의 지속적인 개발을 핵심 도메인보다 낮은 우선순위를 부여하고, 핵심 개발자들을 이러한 작업에 배치하지 마세요(그들은 이를 통해 도메인 지식을 거의 얻지 못할 것이기 때문이다).
+- 또한 이러한 일반 서브도메인에 대해 외부 솔루션이나 출판된 모델을 고려해라.
+
+
 ## 5.4 Domain Vision Statement
 ## 5.5 Highlighted Core
 ## 5.6 Cohesive Mechanisms(응집력 있는 메커니즘)
