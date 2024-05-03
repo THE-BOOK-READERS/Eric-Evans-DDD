@@ -45,6 +45,9 @@
 ## 4.4 Shared Kernel
 
 
+
+
+
 ## 4.5 Customer/Supplier Development
 
 
