@@ -87,10 +87,27 @@
 
 
 ## 4.6 Conformist
+> When two development teams have an upstream/down-stream relationship in which the upstream has no motivation to provide for the downstream team’s needs, the downstream team is helpless. Altruism may motivate upstream developers to make promises, but they are unlikely to be fulfilled. Belief in those good intentions leads the downstream team to make plans based on features that will never be available. The downstream project will be delayed until the team ultimately learns to live with what it is given. An interface tailored to the needs of the downstream team is not in the cards.
+
+- 두 개발 팀이 업스트림/다운스트림 관계에 있고 업스트림이 다운스트림 팀의 요구 사항을 충족할 동기가 없는 경우, 다운스트림 팀은 도움을 받을 수 없게 된다.
+- 이타주의는 업스트림 개발자가 약속을 하도록 동기 부여할 수 있지만, 그 약속이 이행될 가능성이 적다.
+- 이런 좋은 의도에 대한 믿음은 다운스트림 팀이 결코 이용할 수 없는 기능을 기반으로 계획을 세우가 만든다.
+- 이로 인해 다운스트림 프로젝트는 팀이 궁극ㅁ적으로 주어진 대로 살아가는 방법을 배울 때까지 지연될 것이다.
+- 다운스트림 팀의 요구사항에 맞춘 인터페이스는 기대하기 힘들다.
+
+> Therefore:
 
 
+> Eliminate the complexity of translation between bounded contexts by slavishly adhering to the model of the upstream team. Although this cramps the style of the downstream designers and probably does not yield the ideal model for the application, choosing conformity enormously simplifies integration. Also, you will share a ubiquitous language with your upstream team. The upstream is in the driver’s seat, so it is good to make communication easy for them. Altruism may be sufficient to get them to share information with you.
 
-## 4.7 Anticorruption Layer(부패 방지 레이어)
+- 업스트림 팀의 모델을 맹목적으로 따라감으로써 bounded contexts 간 번역의 복잡성을 제거한다.
+- 이는 다운스트림 설계자의 스타일을 제한하고, 아마도 애플리케이션을 위한 이상적인 모델을 얻지 못할 수 있을지라도, 일관성을 선택하면, 통합은 엄청나게 단순화된다.
+- 또한, 업스트림 팀과 유비쿼터스 언어를 공유하게 된다.
+- 업스트림 팀이 driver 자리에 있으므로, 그들과의 커뮤니케이션을 쉽게 만드는 것이 좋다.
+- 이타주의는 그들이 너와 함께 정보를 공유하도록 하는데 충분할 수 있다. 
+
+
+## 4.7 Anticorruption Layer(부패 방지 레이어) -> 협업이 어려운 팀에서 사용할 수 있는 기술
 > Translation layers can be simple, even elegant, when bridging well-designed bounded contexts with cooperative teams. But when control or communication is not adequate to pull off a shared kernel, partner or customer/supplier relationship, translation becomes more complex. The translation layer takes on a more defensive tone.
 
 - 협력 팀과 잘 디자인된 bounded contexts를 연결할 때, Translation 레이어는 간단하고 심지어 우아할 수 있다.
