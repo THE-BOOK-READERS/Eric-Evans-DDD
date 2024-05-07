@@ -93,6 +93,37 @@
 ## 4.8 Open-host Service
 
 ## 4.9 Published Language
+> The translation between the models of two bounded contexts requires a common language.
+
+- 두 개의 제한된 컨텍스트 모델 간의 번역에는 공통 언어가 필요하다.
+
+
+> Direct translation to and from the existing domain models may not be a good solution. Those models may be overly complex or poorly factored. They are probably undocumented. If one is used as a data interchange language, it essentially becomes frozen and cannot respond to new development needs.
+
+- 이미 존재하는 도메인 모델과의 직접적인 translation은 좋은 해결책이 아닐 수 있다.
+- 이러한 모델들은 지나치게 복잡하거나 잘못된 요소로 구성될 수 있다.
+- 아마도 문서화되지 않은 것 같다.
+- 이러한 모델이 데이터 교환 언어로 사용된다면, 본질적으로 고정되어 새로운 개발 요구에 대응할 수 없게 된다.
+
+
+> Therefore:
+
+> Use a well-documented shared language that can express the necessary domain information as a common medium of communication, translating as necessary into and out of that language.
+
+- 필요에 따라 해당 언어로 번역할 수 있으면서, 일반적인 의사소통 매체로서 필요한 도메인 정보를 표현할 수 있는, 잘 문서화된 고융 언어를 사용해라.
+
+
+> Many industries establish published languages in the form of data interchange standards. Project teams also develop their own for use within their organization.
+
+- 많은 산업 분야에서는 데이터 교환 표준의 형태로 Published language를 설정한다.
+- 프로젝트 팀도 자체적으로 조직 내에서 사용하기 위해 개발하기도 한다.
+
+
+> Published language is often combined with open-host service.
+
+- Published language 는 종종 open-host service와 결합된다.
+
+
 
 ## 4.10 Separate Ways
 > We must be ruthless when it comes to defining requirements. If two sets of functionality have no significant relationship, they can be completely cut loose from each other.
