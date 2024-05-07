@@ -88,7 +88,31 @@
 
 ## 4.6 Conformist
 
-## 4.7 Anticorruption Layer
+
+
+## 4.7 Anticorruption Layer(부패 방지 레이어)
+> Translation layers can be simple, even elegant, when bridging well-designed bounded contexts with cooperative teams. But when control or communication is not adequate to pull off a shared kernel, partner or customer/supplier relationship, translation becomes more complex. The translation layer takes on a more defensive tone.
+
+- 협력 팀과 잘 디자인된 bounded contexts를 연결할 때, Translation 레이어는 간단하고 심지어 우아할 수 있다.
+- 그러나, 컨트롤아나 의사 소통이 충분하지 않은 경우, 공유 커널, 파트너 또는 고객/공급업체 관계에서는 Translation이 더 복잡해진다.
+- translation 레이어는 보다 방어적인 톤을 띠게 된다. (-> 번역 레이어가 외부 시스템의 변화에 견딜 수 있도록 설계되어야 한다)
+
+
+> A large interface with an upstream system can eventually overwhelm the intent of the downstream model altogether, causing it to be modified to resemble the other system’s model in an ad hoc fashion. The models of legacy systems are usually weak (if not big balls of mud), and even the exception that is clearly designed may not fit the needs of the current project, making it impractical to conform to the upstream model. Yet the integration may be very valuable or even required for the downstream project.
+
+- 업스트림 시스템을 갖는 대규모 인터페이스는 결국 다운스트림 모델의 의도를 완전히 압도하여, 임시적으로 다운스트림 모델이 다른 시스템의 모델과 유사하도록 수정될 수 있다.
+- 레거시 시스템의 모델은 일반적으로 (큰 진흙 덩어리가 아니더라도) 약하고, 명확하게 설계된 예외라도, 현재 프로젝트의 요구사항에 맞지 않지 않아, 업스트림 모델을 따르는 것이 비실용적일 수 있다.
+- 하지만, 통합은 다운스트림 프로젝트를 위해 매우 가치 있거나 필요할 수 있다.
+
+> Therefore:
+
+
+> As a downstream client, create an isolating layer to provide your system with functionality of the upstream system in terms of your own domain model. This layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in one or both directions as necessary between the two models.
+
+- 다운스트림 클라이언트로서, 자체 도메인 모델 관점에서 업스트림 시스템의 기능을 시스템에 제공하기 위해 isolating 레이어를 만들어라.
+- 이 레이어는 다른 시스템을 거의 또는 전혀 수정하지 않고도, 기존 인터페이스를 통해 다른 시스템과 통신한다.
+- 내부적으로, 이 레이어는 두 모델 사이에서 필요에 따라 한방향 또는 양방향으로 translate 한다.
+
 
 ## 4.8 Open-host Service
 > Typically for each bounded context, you will define a translation layer for each component with which you have to integrate that is outside the context. Where integration is one-off, this approach of inserting a translation layer for each external system avoids corruption of the models with a minimum of cost. But when you find your subsystem in high demand, you may need a more flexible approach.
