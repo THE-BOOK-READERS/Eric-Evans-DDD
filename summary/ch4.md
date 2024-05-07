@@ -96,13 +96,18 @@
 
 ## 4.10 Separate Ways
 > We must be ruthless when it comes to defining requirements. If two sets of functionality have no significant relationship, they can be completely cut loose from each other.
-- 
 
+- 우리는 요구사항을 정의할 때, 무자비해야 한다.
+- 만약, 두 기능 집합이 유의미한 관련이 없다면, 그것들은 서로 완전히 분리할 수 있다.
+  
 > Integration is always expensive, and sometimes the benefit is small.
+- 통합은 항상 비용이 많이 들고, 떄로는 이득이 작을 수 있다. (-> 따라서, 억지로 통합하려고 하지 말고, 분리해라?) 
 
 > Therefore:
 
 > Declare a bounded context to have no connection to the others at all, allowing developers to find simple, specialized solutions within this small scope.
+
+- 개발자가 이 작은 범위 내에서 간단하고 특화된 해결책을 찾을 수 있도록, bounded context를 다른 bounded context와 전혀 연결되지 않도록 선언해라.
 
 
 
