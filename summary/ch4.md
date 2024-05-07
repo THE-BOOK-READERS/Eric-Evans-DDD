@@ -95,6 +95,16 @@
 ## 4.9 Published Language
 
 ## 4.10 Separate Ways
+> We must be ruthless when it comes to defining requirements. If two sets of functionality have no significant relationship, they can be completely cut loose from each other.
+- 
+
+> Integration is always expensive, and sometimes the benefit is small.
+
+> Therefore:
+
+> Declare a bounded context to have no connection to the others at all, allowing developers to find simple, specialized solutions within this small scope.
+
+
 
 ## 4.11 Big Ball of Mud
 
