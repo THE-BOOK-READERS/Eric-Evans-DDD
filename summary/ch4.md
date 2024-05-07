@@ -91,6 +91,35 @@
 ## 4.7 Anticorruption Layer
 
 ## 4.8 Open-host Service
+> Typically for each bounded context, you will define a translation layer for each component with which you have to integrate that is outside the context. Where integration is one-off, this approach of inserting a translation layer for each external system avoids corruption of the models with a minimum of cost. But when you find your subsystem in high demand, you may need a more flexible approach.
+
+- 일반적으로 각 bounded context를 위해, context를 외부와의 각 component 와 통합해야 할 때마다, translation 레이어를 정의할 것이다.
+- 통합이 일회성인 경우, 각 외부 시스템에 대해 translation 레이어를 삽입하는 이 접근법은 최소한의 비용으로 모델의 손상을 방지한다.
+- 그러나, 너가 너의 하위 시스템이 높은 수요를 발견한다면, 너는 좀더 유연한 접근 방식이 필요할 수 있다.
+
+
+> When a subsystem has to be integrated with many others, customizing a translator for each can bog down the team. There is more and more to maintain, and more and more to worry about when changes are made.
+
+- 한 서브시스템이 여러 다른 시스템과 통합되어야 할 때, 각각 서브 시스템을 위한 translator를 커스텀하는 것은 팀을 수렁에 빠진게 할 수 있다.
+- 유지 관리할 항목이 점점 많아지고 변경 사항이 생길 때, 신경써야할 사항도 점점 늘어납니다.
+
+
+> Therefore:
+
+> Define a protocol that gives access to your subsystem as a set of services. Open the protocol so that all who need to integrate with you can use it. Enhance and expand the protocol to handle new integration requirements, except when a single team has idiosyncratic needs. Then, use a one-off translator to augment the protocol for that special case so that the shared protocol can stay simple and coherent.
+
+- 서비스 집합으로서 너의 서브시스템에 접근할 수 있는 프로토콜을 정의해라.
+- 너와 통합해야 하는 모든 사람들을 위해 프로토콜을 공개해라.
+- 1개의 팀의 독특한 요구 사항을 갖는 경우를 제외하고, 새로운 통합 요구 사항을 처리하기 위해 프로토콜을 개선하고 확장ㅎ라.
+- 그러고 나서, 공유 프로토콜을 단순하고 일관성 있게 유지하기 위해서, 특별한 경우를 위한 프로토콜을 강화하기 위해 일회성 translator를 사용해라.
+
+
+> This places the provider of the service in the upstream position. Each client is downstream, and typically some of them will be conformist and some will build anticorruption layers. A context with an open host service might have any sort of relationship to contexts other than its clients.
+
+- 이것은 서비스 제공자를 업스트림 위치시킨다.
+- 각 클라이언트는 다운스트림이 되고, 일반적으로 일부는 conformist이 되고, 일부는 anticorruption layers를 구축한다.
+- open host service 를 갖는 context는 클라이언트 이외의 컨텍스트와 어떤 종류의 관계도 갖게 될 수 있다.
+
 
 ## 4.9 Published Language
 > The translation between the models of two bounded contexts requires a common language.
@@ -123,6 +152,7 @@
 
 - Published language 는 종종 open-host service와 결합된다.
 
+<img width="595" alt="스크린샷 2024-05-07 오후 7 37 51" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/569bb596-bcc7-404a-8621-fc3e3f64e51d">
 
 
 ## 4.10 Separate Ways
