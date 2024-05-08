@@ -311,7 +311,29 @@ Therefore:
 - 개발자가 이 작은 범위 내에서 간단하고 특화된 해결책을 찾을 수 있도록, bounded context를 다른 bounded context와 전혀 연결되지 않도록 선언해라.
 
 
-
 ## 4.11 Big Ball of Mud
+> As we survey existing software systems, trying to understand how distinct models are being applied within defined boundaries, we find parts of systems, often large ones, where models are mixed and boundaries are inconsistent.
+
+- 기존 소프트웨어 시스템을 조사하면서, 정의된 경계 내에서 어떻게 서로 다른 모델이 적용되는지 이해하려고 노력하는 과정에서, 종종 모델이 혼합되고 경계가 일관성 없는 시스템 부분을 발견합니다.
 
 
+> It is easy to get bogged down in an attempt to describe the context boundaries of models in systems where there simply are no boundaries.
+
+- 모델의 맥락적 경계를 설명하려고 노력할 때, 경계가 없는 시스템에서는 맥락의 경계를 설명하는 것이 쉽지 않습니다.
+
+
+> Well-defined context boundaries only emerge as a result of intellectual choices and social forces (even though the people creating the systems may not always have been consciously aware of these causes at the time). When these factors are absent, or disappear, multiple conceptual systems and mix together, making definitions and rules ambiguous or contradictory. The systems are made to work by contingent logic as features are added. Dependencies crisscross the software. Cause and effect become more and more difficult to trace. Eventually the software congeals into a big ball of mud.
+
+- 잘 정의된 맥락 경계는 지적 선택과 사회적 힘에 의해 나타납니다(시스템을 만드는 사람들이 그 당시 이러한 원인에 대해 항상 의식하지는 않을 수 있음). 이러한 요인이 부재되거나 사라지면, 여러 개념적 시스템이 섞여서 정의와 규칙이 모호하거나 모순적으로 만들어집니다. 기능이 추가됨에 따라 시스템은 우발적인 논리로 작동됩니다. 의존성이 소프트웨어를 가로지르게 됩니다. 원인과 결과를 추적하기가 점점 더 어려워집니다. 결국 소프트웨어는 큰 진흙덩어리로 변모하게 됩니다.
+
+
+> The big ball of mud is actually quite practical for some situations (as described in the original article by Foote and Yoder), but it almost completely prevents the subtlety and precision needed for useful models.
+
+- 큰 진흙덩어리는 실제로 어떤 상황에서는 꽤 유용합니다(푸트와 요더의 원래 논문에서 설명된 대로), 하지만 유용한 모델을 위한 세심함과 정밀함을 거의 완전히 방해합니다.
+
+
+Therefore:
+
+> Draw a boundary around the entire mess and designate it a big ball of mud. Do not try to apply sophisticated modeling within this context. Be alert to the tendency for such systems to sprawl into other contexts.
+
+- 전체 혼돈된 영역 주위에 경계를 그리고 그것을 큰 진흙덩어리로 지정합니다. 이러한 맥락 내에서 세련된 모델링을 시도하지 마십시오. 이러한 시스템이 다른 맥락으로 번져가는 경향을 주의하세요.
