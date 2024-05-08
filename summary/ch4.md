@@ -77,9 +77,37 @@
 
 
 ## 4.4 Shared Kernel
+> Sharing a part of the model and associated code is a very intimate interdependency, which can leverage design work or undermine it.
+
+- 모델의 일부를 공유하고 관련된 코드를 공유하는 것은 매우 밀접한 상호 의존성을 가지며, 설계 작업을 활용하거나 그것을 약화시킬 수 있다.
 
 
+> When functional integration is limited, the overhead of continuous integration of a large context may be deemed too high. This may especially be true when the team does not have the skill or the political organization to maintain continuous integration, or when a single team is simply too big and unwieldy. So separate bounded contexts might be defined and multiple teams formed.
 
+- 기능 통합이 제한되어 있을 때는 큰 컨텍스트의 지속적 통합의 오버헤드가 너무 높다고 여겨질 수 있다. 이는 팀이 지속적 통합을 유지할 능력이나 정치적 조직력이 없는 경우, 또는 단일 팀이 단순히 너무 커서 다루기 어려울 때 특히 그렇다. 따라서 별도의 경계가 정의되고 여러 팀이 형성될 수 있다.
+
+
+> Once separate, uncoordinated teams working on closely related applications can go racing forward for a while, but what they produce may not fit together. Even partner teams can end up spending a great deal on translation layers and retrofitting, meanwhile duplicating effort and losing the benefits of a common ubiquitous language.
+
+- 한 번 별도로 정의된, 밀접하게 관련된 애플리케이션에 대해 작업하는 비조정 팀은 얼마 동안 빠르게 나아갈 수 있지만, 그들이 생산하는 것이 함께 맞지 않을 수 있다. 심지어 파트너 팀조차도 번역 계층과 후행 작업에 많은 비용을 들일 수 있으며, 동시에 노력을 중복하고 공통적으로 사용되는 언어의 혜택을 잃을 수 있다.
+
+
+Therefore:
+
+
+> Designate with an explicit boundary some subset of the domain model that the teams agree to share. Keep this kernel small.
+
+- 팀이 공유하기로 합의한 도메인 모델의 일부를 명시적 경계로 지정한다. 이 커널을 작게 유지한다.
+
+
+> Within this boundary, include, along with this subset of the model, the subset of code or of the database design associated with that part of the model. This explicitly shared stuff has special status, and shouldn’t be changed without consultation with the other team.
+
+- 이 경계 내에서, 이 모델의 일부와 함께 코드나 데이터베이스 디자인의 일부를 포함한다. 명시적으로 공유되는 이 내용은 특별한 상태를 가지며, 다른 팀과 협의 없이 변경해서는 안 된다.
+
+
+> Define a continuous integration process that will keep the kernel model tight and align the ubiquitous language of the teams. Integrate a functional system frequently, though somewhat less often than the pace of continuous integration within the teams.
+
+- 커널 모델을 탄탄하게 유지하고 팀의 공통 언어를 조율할 지속적 통합 프로세스를 정의한다. 기능적 시스템을 자주 통합하되, 팀 내 지속적 통합의 속도보다는 조금 낮게 유지한다.
 
 
 ## 4.5 Customer/Supplier Development
