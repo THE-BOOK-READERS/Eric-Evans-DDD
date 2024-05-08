@@ -83,7 +83,33 @@
 
 
 ## 4.5 Customer/Supplier Development
+> When two teams are in an upstream-downstream relationship, where the upstream team may succeed independently of the fate of the downstream team, the needs of the downstream come to be addressed in a variety of ways with a wide range of consequences.
 
+- 두 팀이 업스트림-다운스트림 관계에 있는 경우, 업스트림 팀이 다운스트림 팀의 운명과 무관하게 독립적으로 성공할 수 있을 때, 다운스트림의 요구 사항은 다양한 결과와 함께 다양한 방식으로 다양한 방법으로 해결된다.
+
+
+> A downstream team can be helpless, at the mercy of upstream priorities. Meanwhile, the upstream team may be inhibited, worried about breaking downstream systems. The problems of the downstream team are not improved by cumbersome change request procedures with complex approval processes. And the freewheeling development of the upstream team will stop if the downstream team has veto power over changes.
+
+- 다운스트림 팀은 업스트림의 우선 순위에 도움을 못받은 채로 남겨질 수 있다.
+- 한편, 업스트림 팀은 다운스트림 시스템을 망가뜨리지 않을까 걱정하며 제약을 받을 수 있다.
+- 다운스트림 팀의 문제는 복잡한 승인 프로세스와 번거로운 변경 요청 절차로 해결되지 않는다.
+- 또한, 만약, 다운스트림이 변경에 대한 거부권을 가지고 있다면, 업스트림 팀의 자유로운 개발은 멈출 것이다.
+
+
+Therefore:
+
+
+> Establish a clear customer/supplier relationship between the two teams, meaning downstream priorities factor into upstream planning. Negotiate and budget tasks for downstream requirements so that everyone understands the commitment and schedule.
+
+- 업스트림의 계획에 다운스트림의 우선순위가 반영될수 있도록, 두 팀 간에 명확한 고객/공급자 관계를 설정해라.
+- 모든 이해 관계자가 의뢰와 일정을 이해할 수 있도록, 다운스트림의 요구 사항에 대한 작업을 협상하고 예산을 배정해라.
+
+
+> Agile teams can make the downstream team play the customer role to the upstream team, in planning sessions. Jointly developed automated acceptance tests can validate the expected interface from the upstream. Adding these tests to the upstream team’s test suite, to be run as part of its continuous integration, will free the upstream team to make changes without fear of side effects downstream.
+
+- 애자일 팀은 계획 세션에서 다운스트림 팀이 업스트림 팀에 대한 고객 역할을 수행할 수 있도록 할 수 있다.
+- 공동 개발된 자동 acceptance 테스트는 업스트림으로부터 예상되는 인터페이스를 검증할 수 있다.
+- CI의 일부로 실행되도록, 업스트림 팀의 테스트 suit에 이런 테스트(위에서 말한 `acceptance 테스트`?)를 추가하면, 업스트림 팀이 다운스트림의 side effect에 대한 두려움 없이 자유롭게 변경할 수 있다.
 
 
 ## 4.6 Conformist
