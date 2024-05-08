@@ -74,6 +74,45 @@
 
 
 ## 4.3 Partnership
+> When teams in two contexts will succeed or fail together, a cooperative relationship often emerges.
+
+- 두 개의 맥락에서 팀이 함께 성공하거나 실패할 때, 협력적인 관계가 종종 드러난다.
+
+
+> Poor coordination of mutually dependent subsystems in separate contexts leads to delivery failure for both projects. A key feature missing from one system might make the other system undeliverable. Interfaces that do not match the expectations of the developers of the other subsystem could cause integration to fail. A mutually agreed interface might turn out to be so awkward to use that it slows the development of the client system, or so difficult to implement that it slows the development of the server subsystem. Failure brings both projects down.
+
+- 서로 의존하는 서브시스템들의 부적절한 조정은 두 프로젝트 모두에게 delivery 실패로 이어진다. 
+- 한 시스템에서 누락된 중요한 기능은 다른 시스템이 이용할 수 없게 만들 수 있다.
+- 다른 시스템의 개발자들의 기대와 일치하지 않는 인터페이스는 통합을 실패하게 만들 수 있다.
+- 상호 합의된 인터페이스가 사용하기에 너무 불편하여, 클라이언트 시스템의 개발 속도를 느리게 하거나, 구현하기 너무 어려워서 서버 서브시스템의 개발 속도가 느려질 수 있다.
+- 실패는 두 프로젝트 모두를 망하게 만든다.
+
+
+Therefore:
+
+
+> Where development failure in either of two contexts would result in delivery failure for both, forge a partnership between the teams in charge of the two contexts. Institute a process for coordinated planning of development and joint management of integration.
+
+- 두 맥락 중 하나의 맥락의 개발 실패가 두 시스템 모두의 delivery 실패로 이어질 경우, 두 맥락을 담당하는 팀 간의 파트너십을 구축해라.
+- 개발의 조정된 계획과 통합의 공동 관리를 위한 프로세스를 확립해라.
+
+
+> The teams must cooperate on the evolution of their interfaces to accommodate the development needs of both systems. Interdependent features should be scheduled so that they are completed for the same release.
+
+- 팀은 두 시스템의 개발 요구 사항을 수용하기 위해 인터페이스의 진화에 대해 협력해야 한다.
+- 상호 의존하는 기능들은 동일한 릴리스에 대해 완료되도록 일정을 계획해야 한다.
+
+
+> It is not necessary, most of the time, for developers to understand the model of the other subsystem in detail, but they must coordinate their project planning. When development in one context hits obstacles, then joint examination of the issue is called for, to find an expeditious design solution that does not overly compromise either context.
+
+- 대부분의 경우, 개발자들이 다른 서브시스템의 모델을 자세히 이해할 필요는 없지만, 그들은 (서브시스템을 고려하여) 프로젝트 계획을 조정해야 한다.
+- 어느 한쪽 맥락에 지나치게 치우지지 않는, 신속한 설계 솔루션을 찾기 위해, 이슈에 대해 공동 조사가 필요하다.
+
+
+> Also, a clear process is needed to govern integration. For example, a special test suite can be defined that proves the interface meets the expectations of the client system, which can be run as part of continuous integration on the server system.
+
+- 또한, 명확한 프로세스는 통합을 관리하기 위해 필요하다.
+- 예를 들어, (서버 시스템에서 CI의 일부분으로 실행될 수 있는) 클라이언트 시스템의 기대를 충족시키는 인터페이스를 증명하는 특별한 테스트 suit를 정의할 수 있다.
 
 
 ## 4.4 Shared Kernel
