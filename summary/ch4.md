@@ -205,6 +205,11 @@ Therefore:
 - 업스트림 팀이 driver 자리에 있으므로, 그들과의 커뮤니케이션을 쉽게 만드는 것이 좋다.
 - 이타주의는 그들이 너와 함께 정보를 공유하도록 하는데 충분할 수 있다. 
 
+### Conformist vs Anticorruption Layer
+<img width="560" alt="스크린샷 2024-05-08 오후 7 12 11" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/af9a8e36-63a6-475c-b81c-32c7a01186b9">
+
+<img width="560" alt="스크린샷 2024-05-08 오후 7 12 23" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/30ea64d5-9f71-4826-857d-574176a83136">
+
 
 ## 4.7 Anticorruption Layer(부패 방지 레이어) -> 협업이 어려운 팀에서 사용할 수 있는 기술
 > Translation layers can be simple, even elegant, when bridging well-designed bounded contexts with cooperative teams. But when control or communication is not adequate to pull off a shared kernel, partner or customer/supplier relationship, translation becomes more complex. The translation layer takes on a more defensive tone.
