@@ -191,10 +191,11 @@ Therefore:
 - 두 개발 팀이 업스트림/다운스트림 관계에 있고 업스트림이 다운스트림 팀의 요구 사항을 충족할 동기가 없는 경우, 다운스트림 팀은 도움을 받을 수 없게 된다.
 - 이타주의는 업스트림 개발자가 약속을 하도록 동기 부여할 수 있지만, 그 약속이 이행될 가능성이 적다.
 - 이런 좋은 의도에 대한 믿음은 다운스트림 팀이 결코 이용할 수 없는 기능을 기반으로 계획을 세우가 만든다.
-- 이로 인해 다운스트림 프로젝트는 팀이 궁극ㅁ적으로 주어진 대로 살아가는 방법을 배울 때까지 지연될 것이다.
+- 이로 인해 다운스트림 프로젝트는 팀이 궁극적으로 주어진 대로 살아가는 방법을 배울 때까지 지연될 것이다.
 - 다운스트림 팀의 요구사항에 맞춘 인터페이스는 기대하기 힘들다.
 
-> Therefore:
+
+Therefore:
 
 
 > Eliminate the complexity of translation between bounded contexts by slavishly adhering to the model of the upstream team. Although this cramps the style of the downstream designers and probably does not yield the ideal model for the application, choosing conformity enormously simplifies integration. Also, you will share a ubiquitous language with your upstream team. The upstream is in the driver’s seat, so it is good to make communication easy for them. Altruism may be sufficient to get them to share information with you.
