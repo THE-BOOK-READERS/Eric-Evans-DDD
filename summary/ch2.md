@@ -26,13 +26,10 @@ Therefore:
 
 > When a significant process or transformation in the domain is not a natural responsibility of an entity or value object, add an operation to the model as a standalone interface declared as a service. Define a service contract, a set of assertions about interactions with the service. (See assertions.) State these assertions in the ubiquitous language of a specific bounded context. Give the service a name, which also becomes part of the ubiquitous language.
 
-- 도메인에서 중요한 프로세스나 변환 작업이 엔터티나 값 객체의 자연스러운 책임이 아닌 경우, 모델에 독립적으로 선언된 인터페이스로서의 작업을 추가합니다.
-- 서비스로 선언된 인터페이스에 대한 서비스 계약을 정의합니다.
-- 서비스와의 상호 작용에 대한 일련의 주장을 정의합니다.
-- (주장 참조) 이러한 주장을 특정한 경계된 컨텍스트의 보편적인 언어로 명시합니다.
-- 서비스에 이름을 지정하고 이는 또한 보편적인 언어의 일부가 됩니다.
-
-
+- 도메인 내에서 중요한 프로세스나 변환 작업이 엔터티나 값 객체의 자연스러운 책임이 아닌 경우, 서비스로 선언된 독립실행형 인터페이스로 모델에 대한 작업을 추가해라.
+- 서비스와의 상호 작용에 대한 일련의 assertions인, 서비스 계약을 정의해라.
+- (주장 참조) 특정한 bounded context의 유비쿼터스 언어에, assertions를 기술해라.
+- 유비쿼터스 언어의 일부분이 되는, 이름을 서비스에 지정해라.
 
 
 ## 2.7 Modules
