@@ -103,14 +103,27 @@ Therefore:
 ## 2.10 Factories
 > When creation of an entire, internally consistent aggregate, or a large value object, becomes complicated or reveals too much of the internal structure, factories provide encapsulation.
 
+- 전체 또는 내부적으로 일관된 aggregate, 큰 value object 의 생성이 복잡해지거나 내부 구조를 너무 많이 드러낼 때, factories는 캡슐화를 제공한다.
+
 
 > Creation of an object can be a major operation in itself, but complex assembly operations do not fit the responsibility of the created objects. Combining such responsibilities can produce ungainly designs that are hard to understand. Making the client direct construction muddies the design of the client, breaches encapsulation of the assembled object or aggregate, and overly couples the client to the implementation of the created object.
+
+- 객체의 생성은 그 자체가 주요 작업이 될 수 있지만, 복잡한 조립 작업은 생성된 객체의 책임에 적합하지 않다.
+- 이러한 책임을 결합하는 것은 이해하기 어려운 불편한 설계를 만들어낸다.
+- 클라이언트가 직접 구성하도록 하면, 클라이언트의 디자인을 혼란스럽게 만들고, 조립된 객체나 aggregate의 캡슐화를 위반하고, 생성된 객체의 구현에 클라이언트를 과도하게 연결하게 된다.
 
 
 Therefore:
 
 
 > Shift the responsibility for creating instances of complex objects and aggregates to a separate object, which may itself have no responsibility in the domain model but is still part of the domain design. Provide an interface that encapsulates all complex assembly and that does not require the client to reference the concrete classes of the objects being instantiated. Create an entire aggregate as a piece, enforcing its invariants. Create a complex value object as a piece, possibly after assembling the elements with a builder.
+
+- 복잡한 객체와 집합의 aggregates 생성 책임을 별도의 객체로 이동시켜라. 이 object 자체는 도메인 모델 내에서 책임이 없지만 여전히 도메인 설계의 일부이다.
+- 클라이언트가 인스턴스화된 object의 구체적인 클래스를 참조할 필요가 없으면서, 모든 복잡한 조립을 캡슐화하는 인터페이스를 제공해라.
+- 내부 불변성을 강제하는 전체 aggregate을 한 조각으로 생성해라.
+- 가능하다면 빌더를 사용하여 요소를 조립한 다음, 복잡한 value object를 생성해라.
+
+
 
 
 
