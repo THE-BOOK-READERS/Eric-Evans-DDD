@@ -7,6 +7,41 @@
 - 개별 모델 요소의 세부 사항을 주의 깊게 작성하는 것은 개발자들에게 모델을 탐색하고 구현과 밀접하게 일치시키는 안정된 플랫폼을 제공합니다.
 
 ## 2.2 Layered Architecture
+> In an object-oriented program, UI, database, and other support code often gets written directly into the business objects. Additional business logic is embedded in the behavior of UI widgets and database scripts. This happens because it is the easiest way to make things work, in the short run.
+
+- 객체 지향 프로그램에서, UI, DB, 기타 지원 코드가 비즈니스 객체 내부에 직접 작성되는 경우가 종종 있다.
+- 추가적인 비즈니스 로직은 UI 위젯과 데이터베이스 스크립트의 동작에 내장된다.
+- 이는 단기적으로는 일을 수행하는 가장 쉬운 방법이기 때문에 발생한다.
+
+
+> When the domain-related code is diffused through such a large amount of other code, it becomes extremely difficult to see and to reason about. Superficial changes to the UI can actually change business logic. To change a business rule may require meticulous tracing of UI code, database code, or other program elements. Implementing coherent, model-driven objects becomes impractical. Automated testing is awkward. With all the technologies and logic involved in each activity, a program must be kept very simple or it becomes impossible to understand.
+
+- 도메인 관련 코드가 이러한 많은 양의 다른 코드에 확산되면, 이를 보고 추론하는 것이 극도로 어려워진다.
+- UI의 표면적인 변경은 실제로 비즈니스 로직을 변경할 수 있다.
+- 비즈니스 규칙을 변경하려면, UI 코드, 데이터베이스 코드 또는 기타 프로그램 요소를 꼼꼼하게 추적해야 할 수도 있다.
+- 응집력 있고 모델 기반의 객체를 구현하는 것은 현실적으로 어렵다.
+- 자동화된 테스트가 불편하다. (-> 스파게티 코드니까?)
+- 각 활동에 관련된 모든 기술과 논리로 인해, 프로그램은 매우 단순하게 유지되어야 하며, 그렇지 않으면 이해하기가 불가능해진다.
+
+
+Therefore:
+
+
+> Isolate the expression of the domain model and the business logic, and eliminate any dependency on infrastructure, user interface, or even application logic that is not business logic. Partition a complex program into layers. Develop a design within each layer that is cohesive and that depends only on the layers below. Follow standard architectural patterns to provide loose coupling to the layers above. Concentrate all the code related to the domain model in one layer and isolate it from the user interface, application, and infrastructure code. The domain objects, free of the responsibility of displaying themselves, storing themselves, managing application tasks, and so forth, can be focused on expressing the domain model. This allows a model to evolve to be rich enough and clear enough to capture essential business knowledge and put it to work.
+
+- 도메인 모델과 비즈니스 로직의 표현을 분리하고, 비즈니스 로직이 아닌 인프라, 사용자 인터페이스 또는 응용 프로그램 로직에 대한 의존성을 제거해라.
+- 복잡한 프로그램을 레이어로 분할해라.
+- 응집력 있고 아래 레이어에만 의존하는 각 레이어 내에서 설계를 개발해라.
+- 위의 레이어들에 대한 느슨한 결합을 제공하기 위해 표준 아키텍처 패턴을 따라라.
+- 도메인 모델과 관련된 모든 코드를 하나의 레이어에 집중시키고, 이를 사용자 인터페이스, 응용 프로그램 및 인프라 코드로부터 분리시켜라.
+- 자신을 표시하고 저장하고 응용 프로그램 작업을 관리하는 것과 같은 책임에서 자유로운 도메인 객체는 도메인 모델을 표현하는 데 집중할 수 있다.
+- 이를 통해 모델은 필수적인 비즈니스 지식을 포착하고 이를 작동시킬 수 있을 만큼 충분히 풍부하고 명확하게 발전할 수 있다.
+
+
+> The key goal here is isolation. Related patterns, such as “Hexagonal Architecture” may serve as well or better to the degree that they allow our domain model expressions to avoid dependencies on and references to other system concerns.
+
+- 여기서의 주요 목표는 격리입니다.
+- "헥사고날 아키텍처"와 같은, 관련 패턴은 우리의 도메인 모델 표현이 다른 시스템 관심사에 대한 의존성과 참조를 피할 수 있도록 허용하는 정도에 따라 더 나은 역할을 할 수 있다.
 
 
 ## 2.3 Entities 
