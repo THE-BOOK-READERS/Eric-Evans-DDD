@@ -122,13 +122,18 @@ Therefore:
 
 > An entity is responsible for tracking its state and the rules regulating its lifecycle. But if you need to know the actual causes of the state changes, this is typically not explicit, and it may be difficult to explain how the system got the way it is. Audit trails can allow tracing, but are not usually suited to being used for the logic of the program itself. Change histories of entities can allow access to previous states, but ignores the meaning of those changes, so that any manipulation of the information is procedural, and often pushed out of the domain layer.
 
-- 엔터티는 자신의 상태를 추적하고 생명주기를 규제하는 데 책임이 있습니다.
-- 그러나 상태 변경의 실제 원인을 알아야 할 경우, 이는 일반적으로 명시적으로 표현되지 않으며, 시스템이 현재 상태로 이어진 경로를 설명하는 것이 어려울 수 있습니다. 감사 트레일은 추적을 허용할 수 있지만, 보통 프로그램 자체의 로직에 사용하기에는 적합하지 않습니다. 엔터티의 변경 이력은 이전 상태에 액세스할 수 있게 할 수 있지만, 이러한 변경의 의미를 무시하여 정보 조작이 절차적이며 종종 도메인 레이어를 벗어나게 됩니다.
+- 엔터티는 자신의 상태와 자신의 생명주기를 규제하는 규칙을 추적할 책임이 있다.
+- 그러나 상태 변경의 실제 원인을 알아할 필요가 있는 경우, 이는 일반적으로 명시적이지 않으며, 시스템이 어떻게 이렇게 되었는지 설명하기 어려울 수 있다.
+- 감사 추적을 통해 추적이 가능하지만, 보통 프로그램 자체의 로직에 사용하기에는 적합하지 않다.
+- 엔터티의 변경 히스토리는 이전 상태에 대한 액세스를 허용할 수 있지만, 이러한 변경의 의미를 무시하므로, 정보 조작은 절차적이며 종종 도메인 레이어 밖으로 벗어나게 된다.
   
 
 > A distinct, though related set of issues arises in distributed systems. The state of a distributed system cannot be kept completely consistent at all times. We keep the aggregates internally consistent at all times, while making other changes asynchronously. As changes propagate across nodes of a network, it can be difficult to resolve multiple updates arriving out of order or from distinct sources.
 
-- 분산 시스템에서는 상태를 언제나 완전히 일관되게 유지하는 것이 불가능합니다. 우리는 집계를 항상 내부적으로 일관되게 유지하면서 다른 변경 사항은 비동기적으로 수행합니다. 변경 사항이 네트워크 노드를 통해 전파됨에 따라 순서가 바뀌거나 여러 업데이트가 비정렬되게 도착하는 문제를 해결하기가 어려울 수 있습니다.
+- 분산 시스템에서는 분명히 관련된 문제가 발생한다.
+- 분산 시스템의 상태는 언제나 완전히 일관되게 유지될 수 없다.
+- 우리는 aggregate를 항상 내부적으로 일관되게 유지하는 동시에, 다른 변경 사항을 비동기적으로 수행한다.
+- 네트워크 노드를 통해 변경 사항이 전파됨에 따라, 순서가 뒤죽박죽으로 또는 다른 소스로부터 도착하는 여러 업데이트를 해결하기가 어려울 수 있다.
   
 
 Therefore:
@@ -136,22 +141,31 @@ Therefore:
 
 > Model information about activity in the domain as a series of discrete events. Represent each event as a domain object. These are distinct from system events that reflect activity within the software itself, although often a system event is associated with a domain event, either as part of a response to the domain event or as a way of carrying information about the domain event into the system.
 
-- 도메인에서의 활동에 대한 정보를 일련의 이벤트로 모델링합니다. 각 이벤트를 도메인 객체로 표현합니다. 이러한 이벤트는 소프트웨어 자체의 활동을 반영하는 시스템 이벤트와는 다르지만, 종종 시스템 이벤트는 도메인 이벤트와 연결되어 있습니다. 도메인 이벤트는 도메인에서 발생한 일을 대표하는 도메인 모델의 완전한 부분입니다. 도메인 전문가들이 추적하거나 알림을 받고자 하는 이벤트를 명시적으로 만들고, 다른 모델 객체의 상태 변경과 관련된 이벤트를 나타냅니다.
+- 일련의 개별 이벤트로서 도메인에서의 활동에 대한 정보를 모델링해라.
+- 각 이벤트를 도메인 객체로 표현해라.
+- 비록, 시스템으로 도메인 이벤트에 대한 정보를 전달하는 방법으로서 또는 도메인 이벤트에 대한 응답의 일부로, 시스템 이벤트와 도메인 이벤트가 종종 연관되어있을 지라도, 이러한 이벤트들은 소프트웨어 자체 내의 활동을 반영하는 시스템 이벤트와는 다르다.
+  
 
 
 > A domain event is a full-fledged part of the domain model, a representation of something that happened in the domain. Ignore irrelevant domain activity while making explicit the events that the domain experts want to track or be notified of, or which are associated with state change in the other model objects.
 
-- 도메인 이벤트는 도메인 모델의 완전한 부분으로, 도메인에서 발생한 일의 대표적인 표현입니다. 도메인 전문가들이 추적하거나 알림을 받고자 하는 이벤트를 명시적으로 만들면서, 도메인 활동 중에서 중요하지 않은 것들은 무시합니다. 또는 다른 모델 객체의 상태 변경과 관련된 이벤트를 나타냅니다.
+- 도메인 이벤트는 도메인 모델의 완전한 부분으로, 도메인에서 발생한 일을 나타낸다.
+- 도메인 전문가가 추적하거나 알림을 받기를 원하는 또는 다른 모델 객체의 상태 변화와 관련된 이벤트를 명시적으로 만드는 동안, 관련 없는 도메인 활동을 무시해라.
 
 
 > In a distributed system, the state of an entity can be inferred from the domain events currently known to a particular node, allowing a coherent model in the absence of full information about the system as a whole.
 
-- 분산 시스템에서는 특정 노드에서 현재 알려진 도메인 이벤트를 통해 엔터티의 상태를 추론할 수 있어 전체 시스템에 대한 완전한 정보가 없어도 일관된 모델을 제공할 수 있습니다.
+- 분산 시스템에서는, 특정 노드에서 현재 알려진 도메인 이벤트를 통해 엔터티의 상태를 추론할 수 있다.
+- 따라서, 시스템 전체에 대한 전체 정보가 없어도 일관된 모델을 제공할 수 있다.
 
 
 > Domain events are ordinarily immutable, as they are a record of something in the past. In addition to a description of the event, a domain event typically contains a timestamp for the time the event occurred and the identity of entities involved in the event. Also, a domain event often has a separate timestamp indicating when the event was entered into the system and the identity of the person who entered it. When useful, an identity for the domain event can be based on some set of these properties. So, for example, if two instances of the same event arrive at a node they can be recognized as the same.
 
-- 도메인 이벤트는 보통 과거의 기록이므로 변경되지 않습니다. 이벤트의 설명 외에도, 도메인 이벤트에는 일반적으로 이벤트가 발생한 시간의 타임스탬프와 이벤트에 관련된 엔터티의 식별자가 포함됩니다. 또한, 도메인 이벤트에는 시스템에 입력된 이벤트가 발생한 시간과 이벤트를 입력한 사람의 식별자를 나타내는 별도의 타임스탬프가 있을 수 있습니다. 필요한 경우, 도메인 이벤트의 식별자는 이러한 속성 중 일부를 기반으로 할 수 있습니다. 따라서 예를 들어, 동일한 이벤트의 두 인스턴스가 노드에 도착하면 동일한 이벤트로 인식될 수 있습니다.
+- 도메인 이벤트는 보통 과거의 기록이므로 일반적으로 immutable하다.
+- 이벤트의 설명 외에도, 도메인 이벤트에는 일반적으로 이벤트가 발생한 시간의 타임스탬프와 이벤트에 관련된 엔터티의 식별자가 포함되어 있다.
+- 또한, 도메인 이벤트에는 시스템에 입력된 이벤트가 발생한 시간과 이벤트를 입력한 사람의 식별자를 나타내는 별도의 타임스탬프가 있을 수 있다.
+- 필요한 경우, 도메인 이벤트의 식별자는 이러한 속성 중 일부 집합을 기반으로 할 수 있다.
+- 따라서 예를 들어, 동일한 이벤트의 두 인스턴스가 노드에 도착하면, 동일한 이벤트로 인식될 수 있다.
 
 
 ## 2.6 Services 
