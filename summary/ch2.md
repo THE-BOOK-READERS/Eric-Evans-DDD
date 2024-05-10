@@ -107,12 +107,17 @@ Therefore:
 ## 2.7 Modules
 > Everyone uses modules, but few treat them as a full-fledged part of the model. Code gets broken down into all sorts of categories, from aspects of the technical architecture to developers’ work assignments. Even developers who refactor a lot tend to content themselves with modules conceived early in the project.
 
-- 모든 사람들이 모듈을 사용하지만, 그 중 소수만이 모듈을 모델의 완전한 일부로 취급합니다. 코드는 기술 아키텍처의 측면부터 개발자의 작업 할당까지 다양한 범주로 분할됩니다. 심지어 많은 리팩토링을 하는 개발자들도 프로젝트 초반에 고려된 모듈에 만족하는 경우가 많습니다.
+- 모든 사람들이 모듈을 사용하지만, 그 중 소수만이 모듈을 모델의 완전한 일부로 취급한다.
+- 코드는 기술 아키텍처의 측면부터 개발자의 작업 할당까지 모든 종류의 범주로 분류된다.
+- 심지어 많은 리팩토링을 하는 개발자들도 프로젝트 초기에 구상한 모듈에 만족하는 경향이 많다.
 
 
 > Explanations of coupling and cohesion tend to make them sound like technical metrics, to be judged mechanically based on the distributions of associations and interactions. Yet it isn’t just code being divided into modules, but also concepts. There is a limit to how many things a person can think about at once (hence low coupling). Incoherent fragments of ideas are as hard to understand as an undifferentiated soup of ideas (hence high cohesion).
 
-- 결합도와 응집도의 설명은 종종 기술적인 측정 지표처럼 들립니다. 연결과 상호작용의 분포에 기계적으로 판단됩니다. 하지만 모듈은 코드뿐만 아니라 개념적으로도 분할됩니다. 한 번에 생각할 수 있는 것의 한계가 있기 때문에(따라서 낮은 결합도), 이해하기 어려운 아이디어의 일부 조각은 아이디어의 일관되지 않은 스프로 같이 이해하기 어렵습니다(따라서 높은 응집도).
+- 결합도와 응집도의 설명은 종종 연관성과 상호작용의 분포를 기반으로 기계적으로 판단된, 기술적인 측정 지표처럼 들리는 경향이 있다.
+- 하지만, 그것은 코드만 모듈로 나누는 것이 아니라, 개념도 모듈로 나누어진다.
+- 사람이 한 번에 생각할 수 있는 것의 갯수에는 제한이 있다.(따라서 낮은 결합도),
+- 응집력이 깨진 아이디어 조각은 차별화되지 않는 아이디어 수프처럼 이해하기 어렵다.(따라서 높은 응집도).
 
 
 Therefore:
@@ -120,12 +125,16 @@ Therefore:
 
 > Choose modules that tell the story of the system and contain a cohesive set of concepts. Give the modules names that become part of the ubiquitous language. Modules are part of the model and their names should reflect insight into the domain.
 
-- 시스템의 이야기를 담고 응집된 개념의 세트를 포함하는 모듈을 선택합니다. 모듈에는 보편적인 언어의 일부가 되는 이름을 부여합니다. 모듈은 모델의 일부이며 그 이름은 도메인에 대한 통찰력을 반영해야 합니다.
+- 시스템의 이야기를 담고 응집된 개념의 세트를 포함하는 모듈을 선택해라.
+- 모듈에는 유비쿼터스 언어의 일부가 되는 이름을 부여해라.
+- 모듈은 모델의 일부이며, 그 이름은 도메인에 대한 통찰력을 반영해야 한다.
 
 
 > This often yields low coupling between modules, but if it doesn’t look for a way to change the model to disentangle the concepts, or an overlooked concept that might be the basis of a module that would bring the elements together in a meaningful way. Seek low coupling in the sense of concepts that can be understood and reasoned about independently. Refine the model until it partitions according to high-level domain concepts and the corresponding code is decoupled as well.
 
-- 이는 종종 모듈 간의 낮은 결합도를 유발하지만, 그렇지 않은 경우 모델을 변경하여 개념을 해체할 방법을 찾거나 의미 있는 방식으로 요소를 통합할 수 있는 놓친 개념을 찾습니다. 개념적으로 이해하고 독립적으로 추론할 수 있는 개념을 위해 낮은 결합도를 찾습니다. 고수준 도메인 개념에 따라 모델을 세분화하고 해당 코드도 결합을 줄입니다.
+- 이런 경우에는 보통 모듈 간의 결합도가 낮아지지만, 모델을 변경하여 개념을 해체할 방법을 찾지 않거나, 의미 있는 방식으로 요소들을 함께 결합할 수 있는 모듈의 기초가 될 수 있는 간과된 개념을 찾지 않는다면, 이러한 결과를 얻지 못할 수 있습니다. (-> 무슨 말인가?)
+- 독립적으로 이애하고 추론할 수 있는 개념이라는 의미에서 낮은 결합도를 추구해라.
+- 고수준 도메인 개념에 따라 모델을 세분화하고, 해당 코드도 분리될 때까지 모델을 개선해라.
 
 
 ## 2.8 Aggregates
