@@ -23,18 +23,21 @@ Therefore:
 
 > When an object is distinguished by its identity, rather than its attributes, make this primary to its definition in the model. Keep the class definition simple and focused on life cycle continuity and identity.
 
-- 객체가 속성보다는 식별자에 의해 구별될 때, 이를 모델에서 주요하게 고려합니다. 클래스 정의를 간단하고 생애주기의 지속성과 식별성에 집중합니다.
+- object가 속성보다는 식별자에 의해 구별될 때, 모델에서 이를 주요 요소로 삼는다.
+- 클래스 정의를 간단하고, 생애주기의 지속성과 식별성에 집중해라.
 
 
 > Define a means of distinguishing each object regardless of its form or history. Be alert to requirements that call for matching objects by attributes. Define an operation that is guaranteed to produce a unique result for each object, possibly by attaching a symbol that is guaranteed unique. This means of identification may come from the outside, or it may be an arbitrary identifier created by and for the system, but it must correspond to the identity distinctions in the model.
 
-- 객체를 형태나 이력과 상관없이 구별하는 수단을 정의합니다. 속성에 의해 객체를 일치시키는 요구 사항을 주의깊게 살펴봅니다. 각 객체에 대해 고유한 결과를 보장하는 작업을 정의하되, 이는 보장된 고유한 심볼을 부착함으로써 이루어질 수 있습니다. 이 식별 방법은 외부에서 제공될 수도 있고, 시스템에서 생성하거나 시스템을 위해 생성된 임의의 식별자일 수 있지만, 이는 모델에서의 식별 구분과 일치해야 합니다.
+- 형태나 이력과 상관없이 각 객체를 구별하는 수단을 정의해라.
+- 속성에 의해 객체를 일치시키는 요구 사항을 주의깊게 살펴봐라.
+- 가능하면 독특함을 보장해주는 심볼 첨부함으로써, 각 객체를 위한 고유한 결과를 내도록 보장하기 위한 동작을 정의해라.
+- 이 식별 방법은 외부에서 제공될 수도 있고, 시스템에서 생성하거나 시스템을 위해 생성된 임의의 식별자일 수 있지만, 이는 모델에서의 식별 구분과 일치해야 합니다.
 
 
 > The model must define what it means to be the same thing.
 
-- 모델은 동일한 것이 무엇을 의미하는지 정의해야 합니다.
-
+- 모델은 그것이 동일하다는 것이 무엇을 의미하는지에 대해 정의해야 한다.
 
 
 ## 2.4 Value Objects
