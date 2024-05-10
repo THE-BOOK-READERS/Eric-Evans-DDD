@@ -9,7 +9,45 @@
 ## 2.2 Layered Architecture
 ## 2.3 Entities 
 ## 2.4 Value Objects
+> Some objects describe or compute some characteristic of a thing.
+
+- 일부 객체는 어떤 대상의 특성을 설명하거나 계산한다.
+
+
+> Many objects have no conceptual identity.
+
+- 많은 객체는 개념적인 식별자(identity)를 가지고 있지 않는다.
+
+
+> Tracking the identity of entities is essential, but attaching identity to other objects can hurt system performance, add analytical work, and muddle the model by making all objects look the same. Software design is a constant battle with complexity. We must make distinctions so that special handling is applied only where necessary.
+
+- 엔티티들의 식별을 추적하는 것은 중요하지만, 다른 객체들에 식별자를 부여하면 시스템 성능에 해를 끼칠 수 있으며, 분석 작업을 추가하고, 모든 객체가 동일하게 보이게 함으로써 모델을 혼란스럽게 만들 수 있다.
+- 소프트웨어 설계은 복잡성과의 지속적인 싸움입니다.
+- 우리는 특별한 처리가 필요한 경우에만 적용되도록 구분해야 한다.
+
+
+> However, if we think of this category of object as just the absence of identity, we haven’t added much to our toolbox or vocabulary. In fact, these objects have characteristics of their own, and their own significance to the model. These are the objects that describe things.
+
+- 그러나 만약 우리가 이러한 종류의 객체를 단순히 식별자가 없는 것으로만 생각한다면, 우리의 도구 상자나 어휘에 큰 변화를 더할 수 없다.(-> 무슨 말이지?)
+- 사실, 이러한 객체들은 그 자체로 특성을 가지고 있으며, 모델에 자신만의 중요성이 있다.
+- 이러한 객체들은 대상을 설명하는 객체입니다.
+
+
+Therefore:
+
+
+> When you care only about the attributes and logic of an element of the model, classify it as a value object. Make it express the meaning of the attributes it conveys and give it related functionality. Treat the value object as immutable. Make all operations Side-effect-free Functions that don’t depend on any mutable state. Don’t give a value object any identity and avoid the design complexities necessary to maintain entities.
+
+- 모델의 요소의 속성과 로직에만 관심이 있는 경우, 해당 요소를 value object로 분류합니다.
+- value object가 속성이 전달하는 의미를 표현하도록 하고, value object에 관련 기능을 부여해라.
+- value object를 immutable하게 취급해라.
+- 모든 작업을 부작용이 없는 함수로 만들어서, 어떤 변경 가능한 상태에도 의존하지 않게 해라.
+- value object에 식별자를 부여하지 말고, 엔티티를 유지하는데 필요한 설계 복잡성을 피해라.
+
+
 ## 2.5 Domain Events * 
+
+
 ## 2.6 Services 
 > Sometimes, it just isn’t a thing.
 - 가끔은 그것이 객체로 모델링하는 것이 적절하지 않을 수 있다.
