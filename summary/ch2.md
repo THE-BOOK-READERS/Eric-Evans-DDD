@@ -7,6 +7,8 @@
 - 개별 모델 요소의 세부 사항을 주의 깊게 작성하는 것은 개발자들에게 모델을 탐색하고 구현과 밀접하게 일치시키는 안정된 플랫폼을 제공합니다.
 
 ## 2.2 Layered Architecture
+
+
 ## 2.3 Entities 
 > Many objects represent a thread of continuity and identity, going through a lifecycle, though their attributes may change.
 
@@ -103,6 +105,28 @@ Therefore:
 
 
 ## 2.7 Modules
+> Everyone uses modules, but few treat them as a full-fledged part of the model. Code gets broken down into all sorts of categories, from aspects of the technical architecture to developers’ work assignments. Even developers who refactor a lot tend to content themselves with modules conceived early in the project.
+
+- 모든 사람들이 모듈을 사용하지만, 그 중 소수만이 모듈을 모델의 완전한 일부로 취급합니다. 코드는 기술 아키텍처의 측면부터 개발자의 작업 할당까지 다양한 범주로 분할됩니다. 심지어 많은 리팩토링을 하는 개발자들도 프로젝트 초반에 고려된 모듈에 만족하는 경우가 많습니다.
+
+
+> Explanations of coupling and cohesion tend to make them sound like technical metrics, to be judged mechanically based on the distributions of associations and interactions. Yet it isn’t just code being divided into modules, but also concepts. There is a limit to how many things a person can think about at once (hence low coupling). Incoherent fragments of ideas are as hard to understand as an undifferentiated soup of ideas (hence high cohesion).
+
+- 결합도와 응집도의 설명은 종종 기술적인 측정 지표처럼 들립니다. 연결과 상호작용의 분포에 기계적으로 판단됩니다. 하지만 모듈은 코드뿐만 아니라 개념적으로도 분할됩니다. 한 번에 생각할 수 있는 것의 한계가 있기 때문에(따라서 낮은 결합도), 이해하기 어려운 아이디어의 일부 조각은 아이디어의 일관되지 않은 스프로 같이 이해하기 어렵습니다(따라서 높은 응집도).
+
+
+Therefore:
+
+
+> Choose modules that tell the story of the system and contain a cohesive set of concepts. Give the modules names that become part of the ubiquitous language. Modules are part of the model and their names should reflect insight into the domain.
+
+- 시스템의 이야기를 담고 응집된 개념의 세트를 포함하는 모듈을 선택합니다. 모듈에는 보편적인 언어의 일부가 되는 이름을 부여합니다. 모듈은 모델의 일부이며 그 이름은 도메인에 대한 통찰력을 반영해야 합니다.
+
+
+> This often yields low coupling between modules, but if it doesn’t look for a way to change the model to disentangle the concepts, or an overlooked concept that might be the basis of a module that would bring the elements together in a meaningful way. Seek low coupling in the sense of concepts that can be understood and reasoned about independently. Refine the model until it partitions according to high-level domain concepts and the corresponding code is decoupled as well.
+
+- 이는 종종 모듈 간의 낮은 결합도를 유발하지만, 그렇지 않은 경우 모델을 변경하여 개념을 해체할 방법을 찾거나 의미 있는 방식으로 요소를 통합할 수 있는 놓친 개념을 찾습니다. 개념적으로 이해하고 독립적으로 추론할 수 있는 개념을 위해 낮은 결합도를 찾습니다. 고수준 도메인 개념에 따라 모델을 세분화하고 해당 코드도 결합을 줄입니다.
+
 
 ## 2.8 Aggregates
 > It is difficult to guarantee the consistency of changes to objects in a model with complex associations. Objects are supposed to maintain their own internal consistent state, but they can be blindsided by changes in other objects that are conceptually constituent parts. Cautious database locking schemes cause multiple users to interfere pointlessly with each other and can make a system unusable. Similar issues arise when distributing objects among multiple servers, or designing asynchronous transactions.
