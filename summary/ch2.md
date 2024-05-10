@@ -57,4 +57,60 @@ Therefore:
 
 
 ## 2.9 Repositories
+> Query access to aggregates expressed in the ubiquitous language.
+
+- 유비쿼터스 언어로 표현된 aggregates에 대한 쿼리 액세스이다.
+
+
+> Proliferation of traversable associations used only for finding things muddles the model. In mature models, queries often express domain concepts. Yet queries can cause problems.
+
+- 객체를 찾는 데만 사용되는 순회 가능한 연관성이 확산은 모델을 혼란스럽게 만든다.
+- 성숙한 모델에서는 쿼리가 종종 도메인 개념을 표현한다.
+- 그러나, 쿼리들은 문제를 일으킬 수 있다.
+
+
+> The sheer technical complexity of applying most database access infrastructure quickly swamps the client code, which leads developers to dumb-down the domain layer, which makes the model irrelevant.
+
+- 대부분의 데이터베이스 액세스 인프라를 적용하는 데서 발생하는 기술적인 복잡성은 클라이언트 코드를 빠르게 압도한다.
+- 이로 인해 개발자들이 도메인 레이어를 단순화하게 되는데, 이는 모델을 관련 없게 만든다.
+
+
+> A query framework may encapsulate most of that technical complexity, enabling developers to pull the exact data they need from the database in a more automated or declarative way, but that only solves part of the problem.
+
+- 쿼리 프레임워크는 대부분의 기술적 복잡성을 캡슐화하고, 개발자가 좀더 자동화된 또는 좀더 선언적인 방식으로 데이터베이스에서 필요한 정확한 데이터를 가져올 수 있도록 돕지만, 이것은 문제의 일부만 해결한다.
+
+
+> Unconstrained queries may pull specific fields from objects, breaching encapsulation, or instantiate a few specific objects from the interior of an aggregate, blindsiding the aggregate root and making it impossible for these objects to enforce the rules of the domain model. Domain logic moves into queries and application layer code, and the entities and value objects become mere data containers.
+
+- 구속받지 않는 쿼리는 객체들로부터 특정 필드를 가져오거나, 캡슐화를 위반하거나, aggregate의 내부로부터 몇 가지 특정 객체를 인스턴스화하거나, aggregate root를 속이거나, 그러한 객체들이 도메인 모델의 규칙을 강제로 적용하는 것을 불가능하게 한다.
+- 도메인 로직이 쿼리와 application 레이어 코드로 이동하고, 엔티티 및 값 객체는 단순한 데이터 컨테이너가 된다.
+
+
+Therefore:
+
+
+> For each type of aggregate that needs global access, create a service that can provide the illusion of an in-memory collection of all objects of that aggregate’s root type. Set up access through a well-known global interface. Provide methods to add and remove objects, which will encapsulate the actual insertion or removal of data in the data store. Provide methods that select objects based on criteria meaningful to domain experts. Return fully instantiated objects or collections of objects whose attribute values meet the criteria, thereby encapsulating the actual storage and query technology, or return proxies that give the illusion of fully instantiated aggregates in a lazy way. Provide repositories only for aggregate roots that actually need direct access. Keep application logic focused on the model, delegating all object storage and access to the repositories.
+
+- 글로벌 액세스가 필요한 각 유형의 aggregate를 위해, 해당 aggregate를의 루트 유형에 대한 모든 객체의 인-메모리 컬렉션처럼 보이는 서비스를 만들어라. (-> 무슨 말이지?)
+- 잘 알려진 글로벌 인터페이스를 통해 액세스를 설정해라.
+- 실제 데이터 저장소에 데이터를 삽입하거나 제거하는 것을 캡슐화하는, 객체 추가 및 제거 메서드를 제공해라.
+- 도메인 전문가에게 의미있는 기준에 따라 객체를 선택하는 메서드를 제공해라. (-> 예, 회원ID로 회원조회, 회원 닉네임으로 회원조회?)
+- 속성값이 기준에 충족하는 완전히 인스턴스화된 객체 또는 객체 컬렉션을 반환하여 실제 저장소와 쿼리 기술을 캡슐화하거나, lazy한 방식으로 완전히 인스턴스화된 aggregates을 가장한 프록시를 반환한다. (-> 무슨 말이지?)
+- 실제로 직접적인 액세스가 필요한 aggregate 루트만을 위한 repositories를 제공해라.
+- application 로직을 모델에 집중시키고, 모든 객체 저장 및 액세스를 repositories에 위임해라.
+
+
 ## 2.10 Factories
+> When creation of an entire, internally consistent aggregate, or a large value object, becomes complicated or reveals too much of the internal structure, factories provide encapsulation.
+
+
+> Creation of an object can be a major operation in itself, but complex assembly operations do not fit the responsibility of the created objects. Combining such responsibilities can produce ungainly designs that are hard to understand. Making the client direct construction muddies the design of the client, breaches encapsulation of the assembled object or aggregate, and overly couples the client to the implementation of the created object.
+
+
+Therefore:
+
+
+> Shift the responsibility for creating instances of complex objects and aggregates to a separate object, which may itself have no responsibility in the domain model but is still part of the domain design. Provide an interface that encapsulates all complex assembly and that does not require the client to reference the concrete classes of the objects being instantiated. Create an entire aggregate as a piece, enforcing its invariants. Create a complex value object as a piece, possibly after assembling the elements with a builder.
+
+
+
