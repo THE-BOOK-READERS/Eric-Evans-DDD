@@ -31,6 +31,36 @@ in this booklet.
 
 
 ## 1.2 Bounded Context
+> Multiple models are in play on any large project. They emerge for many reasons. Two subsystems commonly serve very different user communities, with different jobs, where different models may be useful. Teams working independently may solve the same problem in different ways through lack of communication. The tool set may also be different, meaning that program code cannot be shared.
+
+- 하나의 대규모 프로젝트에서는 여러 모델이 사용된다.
+- 그들은 다양한 이유로 드러난다.
+- 2개의 서브시스템은 서로 다른 사용자 커뮤니티를 대상으로 하며, 각각 서로 다른 작업을 수행하는데, 이는 서로 다른 모델이 유용할 수 있다.
+- 독립적으로 작업하는 팀은 의사소통 부족으로 동일한 문제를 다른 방식으로 해결할 수 있다.
+- 또한, tool 세트가 다를 수 있으몰, 프로그램 코드를 공유할 수 없다.
+
+
+> Multiple models are inevitable, yet when code based on distinct models is combined, software becomes buggy, unreliable, and difficult to understand. Communication among team members becomes confused. It is often unclear in what context a model should not be applied.
+
+- 여러 모델은 피할 수 없는 일이지만, 서로 다른 모델을 기반으로 한 코드가 결합되면, 소프트웨어가 버그가 발생하고, 신뢰성이 떨어지며, 이해하기 어려워진다.
+- 팀 구성원 간의 의사소통이 혼란스러워진다.
+- 어느 문맥에서 모델이 적용되어서 안되는지가 불분명한 경우가 종종 있다.
+
+> Model expressions, like any other phrase, only have meaning in context.
+
+- 다른 어구와 마찬가지로 모델 표현은 오직 문맥 속에서 의미가 있다.
+
+
+Therefore:
+
+
+> Explicitly define the context within which a model applies. Explicitly set boundaries in terms of team organization, usage within specific parts of the application, and physical manifestations such as code bases and database schemas. Apply Continuous Integration to keep model concepts and terms strictly consistent within these bounds, but don’t be distracted or confused by issues outside. Standardize a single development process within the context, which need not be used elsewhere.
+
+- 모델이 적용되는 문맥을 명확히 정의해라.
+- 팀 구성, 응용 프로그램의 특정 부분 내에서의 사용, 코드 베이스 및 데이터베이스 스키마와 같은 물리적 표현 측면에서 boundaries를 명시적으로 설정해라.
+- CI를 적용하여 모델 개념과 용어를 이러한 boundary 내에서 엄격하게 일관성을 유지하되, 외부 이슈에 의해 산만해지거나 혼동되지 않도록 해라.
+- 해당 context 내에서는 다른 곳에서 사용할 필요가 없는 단일 개발 프로세스를 표준화해라.
+
 
 ## 1.3 Ubiquitous Language
 
