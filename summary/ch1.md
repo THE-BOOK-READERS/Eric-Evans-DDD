@@ -214,9 +214,20 @@ Therefore:
 ## 1.7 Refactoring Toward Deeper Insight(더 깊은 통찰력을 향한 리팩터링)
 > Using a proven set of basic building blocks along with consistent language brings some sanity to the development effort. This leaves the challenge of actually finding an incisive model, one that captures subtle concerns of the domain experts and can drive a practical design. A model that sloughs off the superficial and captures the essential is a deep model. This should make the software more in tune with the way the domain experts think and more responsive to the user’s needs.
 
+- 일관된 언어(-> 유비쿼터스 언어?)와 함께 검증된 기본 빌딩 블록 세트(-> 2장에서 말하는 것들?)를 사용하면, 개발 과정에 어느 정도의 정신적 안정감을 가져다 준다.
+- 이것은 실용적인 설계를 이끌 수 있으면서 도메인 전문가의 세세한 고려 사항을 포착하는, 예리한 모델을 실제로 찾는 도전 관제를 남긴다.
+- 표면적인 것을 걷어내고 본질을 포착하는 모델은 심층적인 모델이다.
+- 이는 소프트웨어를 도메인 전문가들이 생각하는 방식과 더 잘 일치시키고, 사용자의 요구에 더 반응할 수 있도록 만들어야 한다.
+
 
 > Traditionally, refactoring is described in terms of code transformations with technical motivations. Refactoring can also be motivated by an insight into the domain and a corresponding refinement of the model or its expression in code.
 
+- 전통적으로, 리팩터링은 기술적 동기를 가지고 코드 변현의 관점에서 셜명된다.
+- 또한, 리팩터링은 도메인에 대한 통찰력과 그에 따른 모델의 개선 또는 코드에서의 표현을 통해 동기부여를 받을 수 있다.
+
 
 > Sophisticated domain models seldom turn out useful except when developed through an iterative process of refactoring, including close involvement of the domain experts with developers interested in learning about the domain.
+
+- 정교한 도메인 모델은 도메인에 대해 학습하는 데 관심이 있는 개발자와 도메인 전문가들의 밀접한 참여를 포함하여, 종종 반복적인 리팩터링 과정을 통해 개발될 때에만 유용해집니다.
+
 
