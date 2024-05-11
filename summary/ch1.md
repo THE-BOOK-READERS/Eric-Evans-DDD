@@ -132,6 +132,25 @@ Therefore:
 
 
 ## 1.4 Continuous Integration
+> Once a bounded context has been defined, we must keep it sound.
+- 일단 bounded context가 정의되면, 우리는 그것을 온전히 유지해야 한다.
+
+
+> When a number of people are working in the same bounded context, there is a strong tendency for the model to fragment. The bigger the team, the bigger the problem, but as few as three or four people can encounter serious problems. Yet breaking down the system into ever-smaller contexts eventually loses a valuable level of integration and coherency.
+
+- 여러 사람이 동일한 bounded context에서 작업하는 경우, 모델이 분열되는 경향이 강하다.
+- 팀이 클수록 문제가 더 커지지만, 3~4명만 있어도, 심각한 문제에 직면할 수 있다.
+- 하지만, 시스템을 점점 더 작은 컨텍스트로 분해하면, 결과적으로 가치있는 수준의 통합과 응집력을 잃게 된다.
+
+
+Therefore:
+
+
+> Institute a process of merging all code and other implementation artifacts frequently, with automated tests to flag fragmentation quickly. Relentlessly exercise the ubiquitous language to hammer out a shared view of the model as the concepts evolve in different people’s heads.
+
+- 분열을 빠르게 감지하는 자동화된 테스트를 통해, 모든 코드와 기타 구현 이티팩트를 자주 병합하는 프로세스 도입해라.
+- 개념이 다양한 사람들의 머리속에서 발전함에 따라, 모델의 공유된 관점을 확립하기 위해, 유비쿼터스 언어를 끊임없이 연습해라.
+
 
 ## 1.5 Model-Driven Design
 
