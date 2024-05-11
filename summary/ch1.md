@@ -188,6 +188,28 @@ Therefore:
 
 
 ## 1.6 Hands-on Modelers(모델을 만들거나 개발하는 과정에서 직접적으로 참여하는 사람들)
+> If the people who write the code do not feel responsible for the model, or don’t understand how to make the model work for an application, then the model has nothing to do with the software. If developers don’t realize that changing code changes the model, then their refactoring will weaken the model rather than strengthen it. Meanwhile, when a modeler is separated from the implementation process, he or she never acquires, or quickly loses, a feel for the constraints of implementation. The basic constraint of model-driven design—that the model supports an effective implementation and abstracts key insights into the domain—is half-gone, and the resulting models will be impractical. Finally, the knowledge and skills of experienced designers won’t be transferred to other developers if the division of labor prevents the kind of collaboration that conveys the subtleties of coding a model-driven design.
+
+- 실제로 코드를 작성하는 사람들이 모델에 대한 책임을 느끼지 않거나 어떻게 모델을 application에 사용할지 이해하지 못하는 경우, 모델은 소프트웨어와 아무 상관이 없게 된다.
+- 개발자들이 코드 변경으로 인해 모델이 변경된다는 사실을 깨닫지 못하면, 그들의 리팩토링은 모델을 강화하는 대신 약화시킬 것이다.
+- 한편, 모델러가 구현 프로세스에서 분리되면, 그는 구현 제약 조건에 대한 감각을 얻지 못하거나 빠르게 잃어버리게 된다.
+- 모델 주도 설계의 기본 제약 조건인 모델이 효과적인 구현을 지원하고 도메인의 핵심 통찰력을 추상화한다는 것은 반쯤 사라지고, 그 결과 모델은 실용적이지 않을 것입니다.
+- 모델 주도 설계의 기본 제약 조건은 모델이 효과적인 구현을 지원하고 도메인의 중요한 통찰력을 요약한다는 것이다.
+- 그러나 이 제약이 반쯤 없어지면, 모델이 실제로 구현에 도움이 되지 않고 도메인에 대한 중요한 통찰력을 잘 요약하지 못하게 된다.
+- 그 결과로는, 만들어진 모델이 실제로 유용하지 않을 수 있다.
+- 마지막으로, 만약, 분업이 모델 주도 설계를 코딩하는 미묘함을 전달하는 협업을 방해한다면, 숙련된 디자이너의 지식과 기술이 다른 개발자에게 전달되지 않을 것이다. 
+
+
+Therefore:
+
+
+> Any technical person contributing to the model must spend some time touching the code, whatever primary role he or she plays on the project. Anyone responsible for changing code must learn to express a model through the code. Every developer must be involved in some level of discussion about the model and have contact with domain experts. Those who contribute in different ways must consciously engage those who touch the code in a dynamic exchange of model ideas through the ubiquitous language.
+
+- 모델에 기여하는 모든 기술 담당자는 프로젝트에서 수행하는 주요 역할이 무엇이든지, 어느 정도의 시간을 코드를 만지는데 투자해야 한다.
+- 코드를 변경하는 데 책임이 있는 모든 사람은 코드를 통해 모델을 표현하는 방법을 배워야 한다.
+- 모든 개발자는 모델에 대한 일정 수준의 토론에 참여하고 도메인 전문가와 접촉해야 한다.
+- 다양한 방법으로 기여하는 사람들은 유비쿼터스 언어를 통해 모델 아이디어를 동적으로 교환하면서 코드를 다루는 사람들을 의식적으로 참여시켜야하낟.
+
 
 ## 1.7 Refactoring Toward Deeper Insight(더 깊은 통찰력을 향한 리팩터링)
 
