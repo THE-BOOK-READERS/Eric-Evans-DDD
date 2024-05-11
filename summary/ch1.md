@@ -63,6 +63,73 @@ Therefore:
 
 
 ## 1.3 Ubiquitous Language
+> To create a supple, knowledge-rich design calls for a versatile, shared team language, and a lively experimentation with language that seldom happens on software projects.
+
+- 유연하고 지식이 풍부한 설계를 만들기 위해서는, 다재다능하고, 공유된 팀 언어, 그리고 소프트웨어 프로젝트에서 드물게 발생하는 언어에 대한 활발한 실험이 필요하다.
+
+
+> Within a single bounded context, language can be fractured in ways that undermine efforts to apply sophisticated modeling. If the model is only used to draw UML diagrams for the technical members of the team, then it is not contributing to the creative collaboration at the heart of DDD.
+
+- 단일 bounded context 내에서는 언어가 정교한 모델링을 적용하려는 노력을 약화시키는 방식으로 분열될 수 있다.
+- 모델이 팀의 기술 멤버들을 위한 UML 다이어그램을 그리는 데만 사용된다면, 모델은 DDD의 핵심인 창의적인 협업에 기여하지 않는다.
+  
+
+> Domain experts use their jargon while technical team members have their own language tuned for discussing the domain in terms of design. The terminology of day-to-day discussions is disconnected from the terminology embedded in the code (ultimately the most important product of a software project). And even the same person uses different language in speech and in writing, so that the most incisive expressions of the domain often emerge in a transient form that is never captured in the code or even in writing.
+
+- 도메인 전문가들은 자신들의 전문 용어를 사용하는 반면, 기술 팀 멤버들은 설계 관점에서 도메인을 논의하기 위해 조정된 자체 언어를 사용한다.
+- 일상적인 토론의 용어는 코드(= 결국 소프트웨어 프로젝트의 가장 중요한 제품)에 내장된 용어와 분리되어 있다.
+- 심지어 같은 사람이라도, 말하는 언어와 쓰는 언어가 다르기 때문에, 도메인의 가장 날카로운 표현은 종종 코드나 글에서도 절대로 포착되지 않는 일시적인 형태로 나타난다.
+
+> Translation blunts communication and makes knowledge crunching anemic.
+
+- 번역은 커뮤니케이션을 둔화시키고 지식을 빈약하게 만든다.
+
+
+> Yet none of these dialects can be a common language because none serves all needs.
+
+- 그러나 이러한 다양한 방언 중 어느 것도 모든 요구를 충족시키지 못하기 때문에, 공통 언어가 될 수 없다.
+
+
+> Domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.
+
+- 도메인 전문가는 도메인을 이해하는데 어색하거나 부적절한 용어나 구조에 이의를 제기해야 한다.
+- ; 개발자는 설계를 방해할 수 있는 모호함이나 불일치를 주의 깊게 관찰해야 한다.
+  
+
+> Play with the model as you talk about the system. Describe scenarios out loud using the elements and interactions of the model, combining concepts in ways allowed by the model. Find easier ways to say what you need to say, and then take those new ideas back down to the diagrams and code.
+
+- 시스템에 대해 이야기하면서 모델을 가지고 놀아봐라.
+- 모델에서 허용하는 방식으로 개념들을 결합하고, 모델의 요소와 상호 작용을 사용하여, 시나리오를 소리내어 설명해라.
+- 말할 필요가 있는 것을 더 쉽게 말하는 방법을 찾고, 그리고 나서 새로운 아이디어를 다시 다이어그램과 코드로 가져와라.
+
+
+> With a ubiquitous language, the model is not just a design artifact. It becomes integral to everything the developers and domain experts do together.
+
+- 유비쿼터스 언어를 사용하면, 모델은 단순히 설계 아티팩트가 아니다.
+- 모델은 개발자와 도메인 전문가들이 함께 하는 모든 것에 필수적인 요소가 된다.
+
+
+Therefore:
+
+
+> Use the model as the backbone of a language. Commit the team to exercising that language relentlessly in all communication within the team and in the code. Within a bounded context, use the same language in diagrams, writing, and especially speech.
+
+- 언어의 중추로 모델을 사용해라.
+- 팀 내에서 그리고 코드에서, 모든 의사소통에서 해당 언어를 끊임없이 사용하도록 강요해라.  
+- bounded context 내에서, 다이어그램, 글쓰기 및 특히 스피치에서 동일한 언어를 사용해라.
+
+
+> Recognize that a change in the language is a change to the model.
+
+- 언어의 변화가 모델의 변화임을 인지해라.
+
+
+> Iron out difficulties by experimenting with alternative expressions, which reflect alternative models. Then refactor the code, renaming classes, methods, and modules to conform to the new model. Resolve confusion over terms in conversation, in just the way we come to agree on the meaning of ordinary words.
+
+- 대안 모델을 반영하는 대체 표현을 실험하여 어려움을 해결해라. 
+- 그런 다음 새로운 모델에 맞게 클래스, 메서드 및 모듈의 이름을 바꾸어 코드를 리팩터링해라.
+- 일상적인 단어의 의미에 동의하는 것과 마찬가지로, 대화에서 용어에 대한 혼란을 해결해라.
+
 
 ## 1.4 Continuous Integration
 
