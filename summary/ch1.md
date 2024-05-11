@@ -153,9 +153,42 @@ Therefore:
 
 
 ## 1.5 Model-Driven Design
+> Tightly relating the code to an underlying model gives the code meaning and makes the model relevant.
 
-## 1.6 Hands-on Modelers
+- 기본 모델에 코드를 긴밀하게 연결하는 것은 코드에 의미를 부여하고 모델이 관련성을 갖게 만든다.
 
-## 1.7 Refactoring Toward Deeper Insight
+
+> If the design, or some central part of it, does not map to the domain model, that model is of little value, and the correctness of the software is suspect. At the same time, complex mappings between models and design functions are difficult to understand and, in practice, impossible to maintain as the design changes. A deadly divide opens between analysis and design so that insight gained in each of those activities does not feed into the other.
+
+- 만약, 설계 또는 그 중심 부분이 도메인 모델에 매핑되지 않는다면, 해당 모델은 거의 가치가 없으며 소프트웨어의 정확성도 의심스럽다.
+- 동시에, 모델과 설계 함수 간의 복잡한 매핑은 이해하기 어렵고, 실제로 설계가 변경됨에 따라 유지 관리하기 어렵다.
+- 분석과 설계 사이에는 심한 격차가 발생하므로, 각 활동에서 얻은 통찰력은 다른 활동에 반영되지 않는다.
+
+
+> Draw from the model the terminology used in the design and the basic assignment of responsibilities. The code becomes an expression of the model, so a change to the code may be a change to the model. Its effect must ripple through the rest of the project’s activities accordingly.
+
+- 모델로부터 설계에서 사용되는 용어와 기본 책임 할당을 추출헤라.
+- 코드는 모델의 표현이 되므로, 코드 변경이 모델 변경일 수 있다.
+- 그것의 효과는 프로젝트의 나머지 활동에 올바르게 전파되어야 한다.
+
+
+> To tie the implementation slavishly to a model usually requires software development tools and languages that support a modeling paradigm, such as object-oriented programming.
+
+- 구현을 모델에 맹목적으로 묶는 것은 일반적으로 객체지향 프로그래밍과 같은 모델링 패러다임을 지원하는 소프트웨어 개발 도구와 언어가 필요하다.
+
+
+Therefore:
+
+
+> Design a portion of the software system to reflect the domain model in a very literal way, so that mapping is obvious. Revisit the model and modify it to be implemented more naturally in software, even as you seek to make it reflect deeper insight into the domain. Demand a single model that serves both purposes well, in addition to supporting a fluent ubiquitous language.
+
+- 매핑이 명확하기 위해, 문자 그대로 도메인 모델을 반영하도록, 소프트웨어 시스템의 일부를 설계해라.
+- 도메인에 대한 더 깊은 통창력을 반여하려고 노력하는 경우조차도, 모델을 다시 살펴보고, 소프트웨어에 보다 더 자연스럽게 구현되도록 수정해라.
+- 하나의 모델이, 유창한 유비쿼터스 언어를 지원하는 것 외에도 2가지 목적을 모두 충족할 수 있도록 요구해라.
+
+
+## 1.6 Hands-on Modelers(모델을 만들거나 개발하는 과정에서 직접적으로 참여하는 사람들)
+
+## 1.7 Refactoring Toward Deeper Insight(더 깊은 통찰력을 향한 리팩터링)
 
 
