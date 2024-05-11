@@ -37,8 +37,22 @@
 3. 소프트웨어 개발자를 작업할 수 있게 만들기
 
 
-
 ## 3.2 Intention-Revealing Interfaces
+> If a developer must consider the implementation of a component in order to use it, the value of encapsulation is lost. If someone other than the original developer must infer the purpose of an object or operation based on its implementation, that new developer may infer a purpose that the operation or class fulfills only by chance. If that was not the intent, the code may work for the moment, but the conceptual basis of the design will have been corrupted, and the two developers will be working at cross-purposes.
+
+- 
+
+Therefore:
+
+
+> Name classes and operations to describe their effect and purpose, without reference to the means by which they do what they promise. This relieves the client developer of the need to understand the internals. These names should conform to the ubiquitous language so that team members can quickly infer their meaning. Write a test for a behavior before creating it, to force your thinking into client developer mode.
+
+
+
+
+
+
+
 ## 3.3 Side-Effect-Free Functions
 ## 3.4 Assertions
 ## 3.5 Standalone Classes
