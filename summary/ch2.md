@@ -16,11 +16,13 @@
 
 > When the domain-related code is diffused through such a large amount of other code, it becomes extremely difficult to see and to reason about. Superficial changes to the UI can actually change business logic. To change a business rule may require meticulous tracing of UI code, database code, or other program elements. Implementing coherent, model-driven objects becomes impractical. Automated testing is awkward. With all the technologies and logic involved in each activity, a program must be kept very simple or it becomes impossible to understand.
 
-- 도메인 관련 코드가 이러한 많은 양의 다른 코드에 확산되면, 이를 보고 추론하는 것이 극도로 어려워진다.
-- UI의 표면적인 변경은 실제로 비즈니스 로직을 변경할 수 있다.
+**도메인 코드가 관련없는 많은 다른 코드을 통해 난잡해질 때**,
+
+- 코드를 보고 추론하는 것이 극도로 어려워진다.
+- UI의 ~~표면적인~~ 사소한 변경은 실제로 비즈니스 로직을 변경할 수 있다.
 - 비즈니스 규칙을 변경하려면, UI 코드, 데이터베이스 코드 또는 기타 프로그램 요소를 꼼꼼하게 추적해야 할 수도 있다.
 - 응집력 있고 모델 기반의 객체를 구현하는 것은 현실적으로 어렵다.
-- 자동화된 테스트가 불편하다. (-> 스파게티 코드니까?)
+- 자동화된 테스트가 어색해진다. ~~(-> 스파게티 코드니까?)~~ 
 - 각 활동에 관련된 모든 기술과 논리로 인해, 프로그램은 매우 단순하게 유지되어야 하며, 그렇지 않으면 이해하기가 불가능해진다.
 
 
