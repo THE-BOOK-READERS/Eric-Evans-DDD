@@ -59,7 +59,7 @@
 
 - 프로젝트에 투입될 수 있는 자원(예 : 시간, 돈, 사람 등)은 한정되어 있다.
 - 따라서, 비즈니스의 핵심 요소([Core Domain](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#52-core-domain))와 그렇지 않은 요소([Generic Subdomains](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#53-generic-subdomains))를 구별하여 자원을 효율적으로 배분하기 위한 방법이 필요하다.
-- 이 방법이 `Distillation`이다.
+- 이럴 때, 핵심 요소를 추출해 내는 것을 `Distillation`이라고 한다.
 - Distillation을 통해 중요한 부분에 집중하고, 그렇지 않은 부분은 간소화하거나 외부에 위임할 수 있다.
 - 이때, 어떤 것이 중요하고, 그렇지 않은지에 대한 기준을 정할 수 있게 해주는 문서들이 있는데, [Domain Vision Statement(약 1p 분량)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#54-domain-vision-statement-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%B9%84%EC%A0%84-%EC%84%A0%EC%96%B8%EB%AC%B8)과 [Highlighted Core(약 3~7p 분량)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#55-highlighted-core)이다.
 - 그리고, 이렇게 분리할 때, 응집력 있게 분리해야된다. ([Cohesive Mechanisms](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#56-cohesive-mechanisms%EC%9D%91%EC%A7%91%EB%A0%A5-%EC%9E%88%EB%8A%94-%EB%A9%94%EC%BB%A4%EB%8B%88%EC%A6%98))
