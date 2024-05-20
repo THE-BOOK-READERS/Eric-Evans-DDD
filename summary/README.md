@@ -72,13 +72,13 @@
 - 따라서, 시스템의 큰 틀을 파악하기 위해 "대규모 구조"가 필요하다.
 - 대규모 구조가 없다면, 개발자는 시스템 전체를 이해해야만 특정 부분을 이해할 수 있게 되어 비효율적이다.
 - 각 부분의 책임에 대한 자세한 지식 없이도 전체 시스템 내에서 각 부분의 위치와 역할을 이해할 수 있도록 하는 것이 중요하다.
-- 또한, 시스템은 시간이 지남에 따라 변화하므로 유연하게 설계해야 한다 (`[Evolving Order](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#62-evolving-order%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%A7%88%EC%84%9C)`).
+- 또한, 시스템은 시간이 지남에 따라 변화하므로 유연하게 설계해야 한다 ([Evolving Order](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#62-evolving-order%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%A7%88%EC%84%9C)).
 - 대규모 구조는 최소한의 단위로 설정하는 것이 좋다. 부적합한 구조는 없는 것보다 더 나쁠 수 있다.
 - 이러한 대규모 구조를 설계하기 위해 4가지 주요 패턴이 있다:
-1. `System Metaphor`: 시스템의 전반적인 이해를 돕는 은유를 사용하는 패턴 (예: 이미지 썸네일 생성 "파이프라인").
-2. `Responsibility Layers`: 관심사 분리를 통해 시스템을 계층 구조로 나누는 패턴(예 : 인프라 계층, 도메인 계층 등)
-3. `Knowledge Level`: 대규모 구조를 표현하고 이해하는 방법을 제공하는 패턴.
-4. `Pluggable Component Framework`: 독립적으로 개발되고 교체 가능한 컴포넌트를 통해 시스템을 모듈화하는 패턴(예: JDBC).
+1. [System Metaphor](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#63-system-metaphor) : 시스템의 전반적인 이해를 돕는 은유를 사용하는 패턴 (예: 이미지 썸네일 생성 "파이프라인").
+2. [Responsibility Layers](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#64-responsibility-layers) : 관심사 분리를 통해 시스템을 계층 구조로 나누는 패턴(예 : 인프라 계층, 도메인 계층 등)
+3. [Knowledge Level](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#65-knowledge-level) : 대규모 구조를 표현하고 이해하는 방법을 제공하는 패턴.
+4. [Pluggable Component Framework](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#66-pluggable-component-framework) : 독립적으로 개발되고 교체 가능한 컴포넌트를 통해 시스템을 모듈화하는 패턴(예: JDBC).
 
 
 
