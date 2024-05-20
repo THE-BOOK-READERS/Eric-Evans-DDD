@@ -80,18 +80,3 @@
 3. [Knowledge Level](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#65-knowledge-level) : 대규모 구조를 표현하고 이해하는 방법을 제공하는 패턴.
 4. [Pluggable Component Framework](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#66-pluggable-component-framework) : 독립적으로 개발되고 교체 가능한 컴포넌트를 통해 시스템을 모듈화하는 패턴(예: JDBC).
 
-
-
-
-### Evolving Order
-- 시스템이 시간이 지남에 따라 변화하고 발전할 수 있도록 유연하게 설계.
-### 대규모 구조의 패턴 1 : System Metaphor
-- 시스템의 개념을 쉽게 이해할 수 있는 비유나 은유.
-### Responsibility Layers
-- 각 계층이 특정 책임을 가지도록 시스템을 계층 구조로 나누는 것.
-### Knowledge Level
--  지식 수준은 도메인 전문가의 지식을 시스템 설계에 반영하는 것을 의미한다.
--  이때, 도메인 지식을 명시적으로 표현하고 관리하는 것.
-### Pluggable Component Framework
-- 독립적으로 개발되고 교체 가능한 컴포넌트로 시스템을 모듈화하는 것.
-
