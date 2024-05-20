@@ -53,14 +53,14 @@
 
 ## 5장. 전략적 설계를 위한 Distillation
 
+- 프로젝트에 투입될 수 있는 자원(예 : 시간, 돈, 사람 등)은 한정되어 있다.
+- 따라서, 비즈니스의 핵심 요소(`Core Domain`)와 그렇지 않은 요소(`Generic Subdomains`)를 구별하여 자원을 효율적으로 배분하기 위한 방법이 필요하다.
+- 이 방법이 `Distillation`이다.
+- Distillation을 통해 중요한 부분에 집중하고, 그렇지 않은 부분은 간소화하거나 외부에 위임할 수 있다.
+- 이때, 어떤 것이 중요하고, 그렇지 않은지에 대한 기준을 정할 수 있게 해주는게, `Domain Vision Statement`과 `Highlighted Core`이다.
+- `Domain Vision Statement`은 1page 분량 정도면 괜찮고, `Highlighted Core`는 3~7페이지 분량이면 괜찮다.
+- 
 
-
-
-
-### Core Domain
-### Generic Subdomains
-### Domain Vision Statement 
-### Highlighted Core
 ### Cohesive Mechanisms
 ### Segregated Core
 ### Abstract Core
@@ -69,7 +69,7 @@
 
 ## 6장. 전략적 설계를 위한 대규모 구조
 - 비즈니스가 발전함에 따라 시스템은 점점 거대해지고 복잡해진다.
-- 따라서, 시스템의 큰 틀을 파악하기 위해 "대규모 구조"가 필요하다.
+- 따라서, 시스템의 큰 틀을 파악하기 위해 `대규모 구조`가 필요하다.
 - 대규모 구조가 없다면, 개발자는 시스템 전체를 이해해야만 특정 부분을 이해할 수 있게 되어 비효율적이다.
 - 각 부분의 책임에 대한 자세한 지식 없이도 전체 시스템 내에서 각 부분의 위치와 역할을 이해할 수 있도록 하는 것이 중요하다.
 - 또한, 시스템은 시간이 지남에 따라 변화하므로 유연하게 설계해야 한다 ([Evolving Order](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch6.md#62-evolving-order%EC%A7%84%ED%99%94%ED%95%98%EB%8A%94-%EC%A7%88%EC%84%9C)).
