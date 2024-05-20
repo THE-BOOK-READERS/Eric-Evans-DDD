@@ -40,16 +40,20 @@
 ### Conceptual Contours
 
 ## 4장. 전략적 설계를 위한 Context Mapping
-### Context Map
-### Partnership * 
-### Shared Kernel 
-### Customer/Supplier Development
-### Conformist
-### Anticorruption Layer
-### Open-host Service
-### Published Language
-### Separate Ways 
-### Big Ball of Mud * 
+
+- Bounded Context를 분리
+- 각 컨택스트 간의 관계와 상호작용을 시각적으로 표현해놓는게 필요하다. (`Context Map`)
+- 각 컨택스트 간의 관계에는 다양한 관계가 존재할 수 있는데, 크게 8가지 형태로 구분할 수 있다.
+1. Partnership :
+2. Shared Kernel 
+3. Customer/Supplier Development
+4. Conformist
+5. Anticorruption Layer
+6. Open-host Service(feat. Published Language)
+7. Separate Ways 
+8. Big Ball of Mud : 이건 그냥 컨텍스트 안 나누는게 더 나은 경우에 사용한다.
+
+
 
 ## 5장. 전략적 설계를 위한 Distillation
 
