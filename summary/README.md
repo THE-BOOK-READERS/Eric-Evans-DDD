@@ -61,7 +61,7 @@
 - 그리고, 이렇게 분리할 때, 응집력 있게 분리해야된다. ([Cohesive Mechanisms](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#56-cohesive-mechanisms%EC%9D%91%EC%A7%91%EB%A0%A5-%EC%9E%88%EB%8A%94-%EB%A9%94%EC%BB%A4%EB%8B%88%EC%A6%98))
 - 그 결과, 분리된 핵심 도메인([Segregated Core](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#57-segregated-core))을 발견할 수 있다.
 - 이렇게 분리된 코어조차도 상세한 내용이 많아서 전체적인 그림을 전달하는 것이 어려울 수 있다.
-- 따라서, 추상화 시켜라.([Abstract Core](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#58-abstract-core))
+- 그럴때에는 추상화 시켜라.([Abstract Core](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#58-abstract-core))
 
 > 핵심, 지원, 일반 도메인 예시
 
