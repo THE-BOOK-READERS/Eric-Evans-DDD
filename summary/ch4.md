@@ -62,7 +62,7 @@
 
 > Map the existing terrain. Take up transformations later.
 
-- 기조 terrain을 매핑해라.
+- 기존 terrain을 매핑해라.
 - 나중에 transformations를 수행해라.
 
 > This map can be a basis for realistic design strategy.
