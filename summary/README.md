@@ -57,13 +57,12 @@
 - 따라서, 비즈니스의 핵심 요소(`Core Domain`)와 그렇지 않은 요소(`Generic Subdomains`)를 구별하여 자원을 효율적으로 배분하기 위한 방법이 필요하다.
 - 이 방법이 `Distillation`이다.
 - Distillation을 통해 중요한 부분에 집중하고, 그렇지 않은 부분은 간소화하거나 외부에 위임할 수 있다.
-- 이때, 어떤 것이 중요하고, 그렇지 않은지에 대한 기준을 정할 수 있게 해주는게, `Domain Vision Statement`과 `Highlighted Core`이다.
-- `Domain Vision Statement`은 1page 분량 정도면 괜찮고, `Highlighted Core`는 3~7페이지 분량이면 괜찮다.
-- 
+- 이때, 어떤 것이 중요하고, 그렇지 않은지에 대한 기준을 정할 수 있게 해주는게, `Domain Vision Statement(1p)`과 `Highlighted Core(3~7p)`이다.
+- 그리고, 이렇게 분리할 때, 응집력 있게 분리해야된다. (`Cohesive Mechanisms`)
+- 그 결과, 분리된 핵심 도메인(`Segregated Core`)을 발견할 수 있다.
+- 이렇게 분리된 코어조차도 상세한 내용이 많아서 전체적인 그림을 전달하는 것이 어려울 수 있다.
+- 따라서, 추상화 시켜라.(`Abstract Core`)
 
-### Cohesive Mechanisms
-### Segregated Core
-### Abstract Core
 
 <img width="573" alt="스크린샷 2024-05-20 오후 1 37 25" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/bdd86f01-b374-423b-b68c-4cd7fdf95b52">
 
