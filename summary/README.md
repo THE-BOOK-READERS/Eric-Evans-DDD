@@ -47,6 +47,8 @@
 - 그리고, 이렇게 나눠진 Bounded Context들간의 관계에는 다양한 관계가 존재할 수 있다.
 - 또한, 이들 간의 어떤 메시지를 어떻게 주고 받을지에 대해서도 정의해야 하는데, 이렇게 정의해 놓은 것이 [Published Language](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#49-published-language)이다.
 - 여기서, Bounded Context들간의 관계에 대해서 크게 7가지 형태를 살펴보자.
+
+
   ### 1. [Partnership](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#43-partnership)
   - Bounded Context들간의 관계가 성공과 실패를 함께하는 관계일 경우에 사용하는 패턴
   - 예를 들면, 추천 시스템과 마케팅 시스템의 관계가 있다.
@@ -78,10 +80,12 @@
     #### 경우 4. 공공데이터를 사용하고 있는데, 우리 프로젝트의 서비스에 맞게 사용하고 싶을 경우
   - 시스템 버전의 어댑터 패턴 같은 느낌이다.
   
-  
   ### 6. [Open-host Service](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#48-open-host-service)
-  
-  
+  - 상류 팀의 고객인 하류 팀이 다수 존재할 때 상류 팀에서 하류 팀의 요구사항을 수용할 수 있는 API를 만들고 이를 서비스 형태로 공개하여 일관성을 유지할 수 있게 하는 서비스를 말한다.
+  - 예를 들어, 상품 도메인이 업스트림이고 추천 도메인, 주문 도메인, 재고 도메인이 다운스트림인 이커머스 시나리오에서 Open-host Service 패턴을 적용해볼 수 있다.
+  - 이떄, 하류 컴포넌트는 상류 서비스의 모델이 자신의 도메인 모델에 영향을 주지 않도록 안티코럽션 계층(Anticorruption Layer)을 활용할 수 있다.
+  <img width="565" alt="스크린샷 2024-05-21 오후 6 47 48" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/10d33083-e002-46a5-b882-b0e3f3d191f1">
+
   ### 7. [Separate Ways](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#410-separate-ways) 
   - Bounded Context들간의 관계가 각자도생의 경우이거나 그러고 싶을 때 사용하는 패턴
   - 예를 들면, 월급을 산정할 때,고객과 관련된 요소(예 : 고객 만족도나 참여하는 고객의 수 등)가 포함되지 않는 경우, 월급 관리 시스템과 고객 관리 시스템간의 관계를 예로 들 수 있다.
