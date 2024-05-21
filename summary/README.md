@@ -44,7 +44,7 @@
 - 이렇게 복잡해진 시스템을 Bounded Context로 정의해서 분리하여, 문제 영역을 작은 단위로 만든다. (이때, 분리하는 기준은 도메인마다 또는 같은 도메인이라도 회사 상황에 따라 다르다.)
 - 이렇게 나눠진 Bounded Context들간의 관계와 상호작용을 시각적으로 표현해놓는게 필요하다.
 - 이때, [Context Map](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#42-context-map)이라는 도구를 활용하면 좋다.
-- 그리고, 이렇게 나눠진 Bounded Context들간의 관계에는 다양한 관계가 존재할 수 있다. (다음, 8가지 형태를 살펴보자.)
+- 그리고, 이렇게 나눠진 Bounded Context들간의 관계에는 다양한 관계가 존재할 수 있다. (다음, 7가지 형태를 살펴보자.)
 - 또한, 이들 간의 어떤 메시지를 어떻게 주고 받을지에 대해서도 정의해야 하는데, 이렇게 정의해 놓은 것이 [Published Language](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#49-published-language)이다.
 - 여기서, Bounded Context들간의 관계에 대해서 크게 8가지 형태를 살펴보자.
 
@@ -84,20 +84,25 @@
 
 
 ### 7. [Separate Ways](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#410-separate-ways) 
+- Bounded Context들간의 관계가 각자도생의 경우이거나 그러고 싶을 때 사용하는 패턴
+- 예를 들면, 월급을 산정할 때,고객과 관련된 요소(예 : 고객 만족도나 참여하는 고객의 수 등)가 포함되지 않는 경우, 월급 관리 시스템과 고객 관리 시스템간의 관계를 예로 들 수 있다.
+- 단, 월급이 고객의 어떤 요소(예 : 고객 만족도나 참여하는 고객의 수 등)에 의해 결정되는 직원(예 : 영업사원, CS 사원 등)이라면, 다른 패턴을 사용할 수 있다.
 
+> Conformist 패턴과 Customer/Supplier Development 패턴이 서로 상하 관계에 있는 것 같은데, 어떤 차이가 있는 걸까?
+> - 다운스트림의 요구사항이 업스트림에 반영할 수 있느냐의 차이가 있다.
+> - 다운스트림의 요구사항이 업스트림에 반영할 수 있으면, Customer/Supplier Development
+> - 다운스트림의 요구사항이 업스트림에 반영할 수 없으면, Conformist
 
-
-### 8. [Big Ball of Mud](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#411-big-ball-of-mud)
-- 이건 그냥 컨텍스트 안 나누는게 더 나은 경우에 사용한다.
-
-
-> Conformist vs Customer/Supplier Development
-- 다운스트림의 요구사항이 업스트림에 반영할 수 있느냐의 차이
-
-> Customer/Supplier Development vs Partnership
-- 양방향 의존적이냐 한방향 의존적이냐의 차이
-
+> Customer/Supplier Development 패턴과 Partnership 패턴 둘다 의존관계가 있는 것 같은데, 어떤 차이가 있는 걸까?
+> - 양방향 의존적이냐 한방향 의존적이냐의 차이
+> - 서로의 성공과 실패가 영향을 주면, Partnership
+> - Customer의 성공과 실패가 Supplier의 영향을 안주면, Customer/Supplier Development
  
+
+- 경우에 따라서, 위의 처럼 Bounded Context를 나누지 않고, Big Ball of Mud](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#411-big-ball-of-mud) 상태로 놔두는 것이 더 나을 때가 있다.
+- 예를 들면, Big Ball of Mud 상태의 시스템이 코드의 비즈니스 가치가 낮은 경우, 또는 Big Ball of Mud 상태의 시스템을 리팩토링 하는 것보다 새로 만드는 것이 더 효율적인 경우가 있다.
+
+
 
 ## 5장. 전략적 설계를 위한 Distillation
 
