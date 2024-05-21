@@ -87,7 +87,7 @@
   - 예를 들면, 월급을 산정할 때,고객과 관련된 요소(예 : 고객 만족도나 참여하는 고객의 수 등)가 포함되지 않는 경우, 월급 관리 시스템과 고객 관리 시스템간의 관계를 예로 들 수 있다.
   - 단, 월급이 고객의 어떤 요소(예 : 고객 만족도나 참여하는 고객의 수 등)에 의해 결정되는 직원(예 : 영업사원, CS 사원 등)이라면, 다른 패턴을 사용할 수 있다.
   
-  >Conformist 패턴과 Customer/Supplier Development 패턴이 서로 상하 관계에 있는 것 같은데, 어떤 차이가 있는 걸까?
+  >Conformist 패턴과 Customer/Supplier Development 패턴이 서로 상하 관계에 있는 것 같은데, 어떤 차이가 있는 걸까?
   > - 다운스트림의 요구사항이 업스트림에 반영할 수 있느냐의 차이가 있다.
   > - 다운스트림의 요구사항이 업스트림에 반영할 수 있으면, Customer/Supplier Development
   > - 다운스트림의 요구사항이 업스트림에 반영할 수 없으면, Conformist
@@ -98,7 +98,7 @@
   > - Customer의 성공과 실패가 Supplier의 영향을 안주면, Customer/Supplier Development
    
 
-- 경우에 따라서, 위의 처럼 Bounded Context를 나누지 않고, Big Ball of Mud](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#411-big-ball-of-mud) 상태로 놔두는 것이 더 나을 때가 있다.
+- 경우에 따라서, 위의 처럼 Bounded Context를 나누지 않고, [Big Ball of Mud](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#411-big-ball-of-mud) 상태로 놔두는 것이 더 나을 때가 있다.
 - 예를 들면, Big Ball of Mud 상태의 시스템이 코드의 비즈니스 가치가 낮은 경우, 또는 Big Ball of Mud 상태의 시스템을 리팩토링 하는 것보다 새로 만드는 것이 더 효율적인 경우가 있다.
 
 
