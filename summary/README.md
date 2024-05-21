@@ -2,18 +2,18 @@
 ## 1장. 모델 활용하기
 - 실제 비즈니스 세계 뿐만 아니라 그 비즈니스 세계를 소프트웨어에 녹여내는 것은 굉장히 복잡하다.
 - 따라서, 이 복잡한 세계에서 소프트웨어이 필요한 개념들을 추상화시켜 모델링 할 수 있다.
-- 이런 방법론을 모델 주도 설계(`Model-Driven Design`)라고 한다.
+- 이런 방법론을 모델 주도 설계([Model-Driven Design](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#15-model-driven-design))라고 한다.
 - 이때, 복잡한 비즈니스 세계를 하나의 덩어리로 만들다 보면, 그 복잡성 또한 증가하게 된다.
-- 따라서, 그렇게 증가하는 복잡성을 해결하기 위해, 도메인에 따라 또는 회사 사정에 따라 쪼갤 수 있는데, 이때 쪼개진 영역을 `Bounded Context`라고 부른다.
+- 따라서, 그렇게 증가하는 복잡성을 해결하기 위해, 도메인에 따라 또는 회사 사정에 따라 쪼갤 수 있는데, 이때 쪼개진 영역을 [Bounded Context](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#12-bounded-context)라고 부른다.
 - 이는 도메인 모델의 명확한 결계를 설정하여 혼란을 방지할 수 있다.
 - 또한, 동일한 개념이더라도, Bounded Context에 따라 다르게 정의될 수 있다.
 - 예를 들면, 회원이라는 모델을 주문 Bounded Context에서는 주문자로 부르는 반면, QnA Bounded Context에서는 질문자로 부를 수 있다.
 - 또한, 같이 일을 하더라도, 서로 다른 용어를 사용해서 커뮤니테이션 비용을 증가하거나 엉뚱한 기능이 만들어지기도 한다.
-- 이것은 서로 사용하는 `언어의 복잡성`이 초래하는 문제인데, 이를 해결하기 위해 팀 전체에 공유하는 일관된 언어인 `Ubiquitous Language` 를 정의되어지고 사용되어진다.
+- 이것은 서로 사용하는 `언어의 복잡성`이 초래하는 문제인데, 이를 해결하기 위해 팀 전체에 공유하는 일관된 언어인 [Ubiquitous Language](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#13-ubiquitous-language)를 정의되어지고 사용되어진다.
 - 이렇게 만들어진 Ubiquitous Language 는 모든 문서와 대화에서 사용되고, 도메인 모델을 만들 때에도 사용된다.
-- 이런 Ubiquitous Language는 도메인과 관련된 이해관계자들(`Hands-on Modelers`)이 함께 지식 탐구에 의해 정의되기도 하고, 발견하기도 하고, 수정되기도 한다.
+- 이런 Ubiquitous Language는 도메인과 관련된 이해관계자들([Hands-on Modelers](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#16-hands-on-modelers%EB%AA%A8%EB%8D%B8%EC%9D%84-%EB%A7%8C%EB%93%A4%EA%B1%B0%EB%82%98-%EA%B0%9C%EB%B0%9C%ED%95%98%EB%8A%94-%EA%B3%BC%EC%A0%95%EC%97%90%EC%84%9C-%EC%A7%81%EC%A0%91%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%B0%B8%EC%97%AC%ED%95%98%EB%8A%94-%EC%82%AC%EB%9E%8C%EB%93%A4))이 함께 지식 탐구에 의해 정의되기도 하고, 발견하기도 하고, 수정되기도 한다.
 - 이 Ubiquitous Language를 사용해서 도메인 모델을 만든다.
-- 이렇게 만들어진 유비쿼터스 언어와 도메인 모델은  CI(Continuous Integration)와 더 깊은 통찰을 위한 리팩토링 과정(Refactoring Toward Deeper Insight)을 통해 점점 더 심층적인 형태로 발전하게 된다.
+- 이렇게 만들어진 유비쿼터스 언어와 도메인 모델은  [Continuous Integration](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#14-continuous-integration)와 더 깊은 통찰을 위한 리팩토링 과정([Refactoring Toward Deeper Insight](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#17-refactoring-toward-deeper-insight%EB%8D%94-%EA%B9%8A%EC%9D%80-%ED%86%B5%EC%B0%B0%EB%A0%A5%EC%9D%84-%ED%96%A5%ED%95%9C-%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81))을 통해 점점 더 심층적인 형태로 발전하게 된다.
 - 처음부터 완벽한 유비쿼터스 언어와 도메인 모델를 만들면 좋겠지만, 현실적으로 불가능하기도 하고, 비즈니스가 진행됨에 따라 변하기도 하기 때문에, 유연하게 대응하기 위해 도구들이 필요하다.
 - 그 도구들 중 하나가 CI와 리팩토링이다.
 - CI을 통해 모델의 지속적인 품질 개선과 오류를 신속하게 발견할 수 있고, 더 깊은 통찰을 위한 리팩터링를 통해 도메인 모델을 개선하고 진화시켜 나갈 수 있다.
