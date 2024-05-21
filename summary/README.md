@@ -44,60 +44,59 @@
 - 이렇게 복잡해진 시스템을 Bounded Context로 정의해서 분리하여, 문제 영역을 작은 단위로 만든다. (이때, 분리하는 기준은 도메인마다 또는 같은 도메인이라도 회사 상황에 따라 다르다.)
 - 이렇게 나눠진 Bounded Context들간의 관계와 상호작용을 시각적으로 표현해놓는게 필요하다.
 - 이때, [Context Map](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#42-context-map)이라는 도구를 활용하면 좋다.
-- 그리고, 이렇게 나눠진 Bounded Context들간의 관계에는 다양한 관계가 존재할 수 있다. (다음, 7가지 형태를 살펴보자.)
+- 그리고, 이렇게 나눠진 Bounded Context들간의 관계에는 다양한 관계가 존재할 수 있다.
 - 또한, 이들 간의 어떤 메시지를 어떻게 주고 받을지에 대해서도 정의해야 하는데, 이렇게 정의해 놓은 것이 [Published Language](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#49-published-language)이다.
-- 여기서, Bounded Context들간의 관계에 대해서 크게 8가지 형태를 살펴보자.
-
-### 1. [Partnership](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#43-partnership)
-- Bounded Context들간의 관계가 성공과 실패를 함께하는 관계일 경우에 사용하는 패턴
-- 예를 들면, 추천 시스템과 마케팅 시스템의 관계가 있다.
-- 추천 시스템의 알고리즘이 마케팅 시스템에 활용되고, 마케팅 시스템의 데이터가 추천 시스템의 알고리즘에 영향을 주는 관계이기 때문이다.
-
-### 2. [Shared Kernel](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#44-shared-kernel)
-- 여러 Bounded Context들 간의 공통으로 사용하는 모델이 있는 경우에 사용하는 패턴
-- 이때, 진짜! 진짜로! 공통으로 사용하는 것들만 Shared Kernel로 채택하는게 중요하다.
-- 그러기 위해서는 작게 단위로 유지하는 것이 좋다.
-- 예를 들어, 회원 도메인이 가장 흔한 예이다.   
-
-### 3. [Customer/Supplier Development](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#45-customersupplier-development)
-- Bounded Context들간의 관계가 수요자(Customer)에 요구사항에 따라 공급자(Supplier)가 공급해 주는 관계인 경우에 사용하는 패턴
-- 예를 들면, 상품 도메인(Supplier)과 주문 도메인(Customer)의 관계가 있다.
-
-### 4. [Conformist](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#46-conformist)
-- Bounded Context들간의 관계가 한쪽 도메인이 무조건적으로 다른 한쪽의 모델과 정책을 따를 수밖에 없는 경우에 사용하는 패턴
-- 따라서, 주로 다운스트림 컨텍스트이 업스트림 컨텍스트에 대한 영향력이 없고, 업스트림 컨텍스트의 변경 사항을 수용해야 하는 경우에 발생한다.
-- 예를 들어, 공공 데이터를 활용하는 경우가 있을 수 있다.
-- 공공데이터를 활용하는 경우, 공공데이터 제공자가 제공해 준대로 공공데이터를 사용할 수 있을 뿐, 공공데이터를 사용자가 이 데이터 달라고 요구하는 관계가 아니다. (물론, 건의 게시판에 글을 쓸 수는 있다ㅎㅎ)
-- 이떄, 공공 데이터 제공자를 `업스트림 컨텍스트`로 보고, 공공 데이터 사용자를 `다운스트림 컨텍스트`로 본다.   
-
-### 5. [Anticorruption Layer](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#47-anticorruption-layer%EB%B6%80%ED%8C%A8-%EB%B0%A9%EC%A7%80-%EB%A0%88%EC%9D%B4%EC%96%B4---%ED%98%91%EC%97%85%EC%9D%B4-%EC%96%B4%EB%A0%A4%EC%9A%B4-%ED%8C%80%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EA%B8%B0%EC%88%A0) :
-- Bounded Context들간의 관계가 서로 연관이 있지만, A Context의 영향을 B Context에 최소화하고 내부 모델을 보호하기 위해 사용하는 패턴 
-- 예를 들면, 다음과 같은 상황에서 사용할 수 있다.
-  #### 경우 1. 한 회사가 기존의 레거시 시스템을 현대화하여 새로운 마이크로서비스 아키텍처로 전환하고 있는 상황에서, 새로운 시스템은 기존 레거시 시스템의 데이터를 사용해야 하지만, 레거시 시스템의 데이터 구조와 비즈니스 로직은 새로운 시스템의 도메인 모델과 맞지 않은 경우
-  #### 경우 2. A 시스템이 B 시스템의 데이터를 사용해야 하는데, A시스템의 팀과 B 시스템의 팀이 서로 협력하기 어려운 경우
-  #### 경우 3. A 시스템이 B 시스템의 데이터를 사용해야 하는데, A시스템의 팀과 B 시스템의 팀의 개발속도가 차이가 나는 경우
-  #### 경우 4. 공공데이터를 사용하고 있는데, 우리 프로젝트의 서비스에 맞게 사용하고 싶을 경우
-- 시스템 버전의 어댑터 패턴 같은 느낌이다.
-
-
-### 6. [Open-host Service](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#48-open-host-service)
-
-
-### 7. [Separate Ways](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#410-separate-ways) 
-- Bounded Context들간의 관계가 각자도생의 경우이거나 그러고 싶을 때 사용하는 패턴
-- 예를 들면, 월급을 산정할 때,고객과 관련된 요소(예 : 고객 만족도나 참여하는 고객의 수 등)가 포함되지 않는 경우, 월급 관리 시스템과 고객 관리 시스템간의 관계를 예로 들 수 있다.
-- 단, 월급이 고객의 어떤 요소(예 : 고객 만족도나 참여하는 고객의 수 등)에 의해 결정되는 직원(예 : 영업사원, CS 사원 등)이라면, 다른 패턴을 사용할 수 있다.
-
-> Conformist 패턴과 Customer/Supplier Development 패턴이 서로 상하 관계에 있는 것 같은데, 어떤 차이가 있는 걸까?
-> - 다운스트림의 요구사항이 업스트림에 반영할 수 있느냐의 차이가 있다.
-> - 다운스트림의 요구사항이 업스트림에 반영할 수 있으면, Customer/Supplier Development
-> - 다운스트림의 요구사항이 업스트림에 반영할 수 없으면, Conformist
-
-> Customer/Supplier Development 패턴과 Partnership 패턴 둘다 의존관계가 있는 것 같은데, 어떤 차이가 있는 걸까?
-> - 양방향 의존적이냐 한방향 의존적이냐의 차이
-> - 서로의 성공과 실패가 영향을 주면, Partnership
-> - Customer의 성공과 실패가 Supplier의 영향을 안주면, Customer/Supplier Development
- 
+- 여기서, Bounded Context들간의 관계에 대해서 크게 7가지 형태를 살펴보자.
+  ### 1. [Partnership](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#43-partnership)
+  - Bounded Context들간의 관계가 성공과 실패를 함께하는 관계일 경우에 사용하는 패턴
+  - 예를 들면, 추천 시스템과 마케팅 시스템의 관계가 있다.
+  - 추천 시스템의 알고리즘이 마케팅 시스템에 활용되고, 마케팅 시스템의 데이터가 추천 시스템의 알고리즘에 영향을 주는 관계이기 때문이다.
+  
+  ### 2. [Shared Kernel](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#44-shared-kernel)
+  - 여러 Bounded Context들 간의 공통으로 사용하는 모델이 있는 경우에 사용하는 패턴
+  - 이때, 진짜! 진짜로! 공통으로 사용하는 것들만 Shared Kernel로 채택하는게 중요하다.
+  - 그러기 위해서는 작게 단위로 유지하는 것이 좋다.
+  - 예를 들어, 회원 도메인이 가장 흔한 예이다.   
+  
+  ### 3. [Customer/Supplier Development](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#45-customersupplier-development)
+  - Bounded Context들간의 관계가 수요자(Customer)에 요구사항에 따라 공급자(Supplier)가 공급해 주는 관계인 경우에 사용하는 패턴
+  - 예를 들면, 상품 도메인(Supplier)과 주문 도메인(Customer)의 관계가 있다.
+  
+  ### 4. [Conformist](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#46-conformist)
+  - Bounded Context들간의 관계가 한쪽 도메인이 무조건적으로 다른 한쪽의 모델과 정책을 따를 수밖에 없는 경우에 사용하는 패턴
+  - 따라서, 주로 다운스트림 컨텍스트이 업스트림 컨텍스트에 대한 영향력이 없고, 업스트림 컨텍스트의 변경 사항을 수용해야 하는 경우에 발생한다.
+  - 예를 들어, 공공 데이터를 활용하는 경우가 있을 수 있다.
+  - 공공데이터를 활용하는 경우, 공공데이터 제공자가 제공해 준대로 공공데이터를 사용할 수 있을 뿐, 공공데이터를 사용자가 이 데이터 달라고 요구하는 관계가 아니다. (물론, 건의 게시판에 글을 쓸 수는 있다ㅎㅎ)
+  - 이떄, 공공 데이터 제공자를 `업스트림 컨텍스트`로 보고, 공공 데이터 사용자를 `다운스트림 컨텍스트`로 본다.   
+  
+  ### 5. [Anticorruption Layer](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#47-anticorruption-layer%EB%B6%80%ED%8C%A8-%EB%B0%A9%EC%A7%80-%EB%A0%88%EC%9D%B4%EC%96%B4---%ED%98%91%EC%97%85%EC%9D%B4-%EC%96%B4%EB%A0%A4%EC%9A%B4-%ED%8C%80%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EA%B8%B0%EC%88%A0) :
+  - Bounded Context들간의 관계가 서로 연관이 있지만, A Context의 영향을 B Context에 최소화하고 내부 모델을 보호하기 위해 사용하는 패턴 
+  - 예를 들면, 다음과 같은 상황에서 사용할 수 있다.
+    #### 경우 1. 한 회사가 기존의 레거시 시스템을 현대화하여 새로운 마이크로서비스 아키텍처로 전환하고 있는 상황에서, 새로운 시스템은 기존 레거시 시스템의 데이터를 사용해야 하지만, 레거시 시스템의 데이터 구조와 비즈니스 로직은 새로운 시스템의 도메인 모델과 맞지 않은 경우
+    #### 경우 2. A 시스템이 B 시스템의 데이터를 사용해야 하는데, A시스템의 팀과 B 시스템의 팀이 서로 협력하기 어려운 경우
+    #### 경우 3. A 시스템이 B 시스템의 데이터를 사용해야 하는데, A시스템의 팀과 B 시스템의 팀의 개발속도가 차이가 나는 경우
+    #### 경우 4. 공공데이터를 사용하고 있는데, 우리 프로젝트의 서비스에 맞게 사용하고 싶을 경우
+  - 시스템 버전의 어댑터 패턴 같은 느낌이다.
+  
+  
+  ### 6. [Open-host Service](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#48-open-host-service)
+  
+  
+  ### 7. [Separate Ways](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#410-separate-ways) 
+  - Bounded Context들간의 관계가 각자도생의 경우이거나 그러고 싶을 때 사용하는 패턴
+  - 예를 들면, 월급을 산정할 때,고객과 관련된 요소(예 : 고객 만족도나 참여하는 고객의 수 등)가 포함되지 않는 경우, 월급 관리 시스템과 고객 관리 시스템간의 관계를 예로 들 수 있다.
+  - 단, 월급이 고객의 어떤 요소(예 : 고객 만족도나 참여하는 고객의 수 등)에 의해 결정되는 직원(예 : 영업사원, CS 사원 등)이라면, 다른 패턴을 사용할 수 있다.
+  
+  >Conformist 패턴과 Customer/Supplier Development 패턴이 서로 상하 관계에 있는 것 같은데, 어떤 차이가 있는 걸까?
+  > - 다운스트림의 요구사항이 업스트림에 반영할 수 있느냐의 차이가 있다.
+  > - 다운스트림의 요구사항이 업스트림에 반영할 수 있으면, Customer/Supplier Development
+  > - 다운스트림의 요구사항이 업스트림에 반영할 수 없으면, Conformist
+  
+  > Customer/Supplier Development 패턴과 Partnership 패턴 둘다 의존관계가 있는 것 같은데, 어떤 차이가 있는 걸까?
+  > - 양방향 의존적이냐 한방향 의존적이냐의 차이
+  > - 서로의 성공과 실패가 영향을 주면, Partnership
+  > - Customer의 성공과 실패가 Supplier의 영향을 안주면, Customer/Supplier Development
+   
 
 - 경우에 따라서, 위의 처럼 Bounded Context를 나누지 않고, Big Ball of Mud](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#411-big-ball-of-mud) 상태로 놔두는 것이 더 나을 때가 있다.
 - 예를 들면, Big Ball of Mud 상태의 시스템이 코드의 비즈니스 가치가 낮은 경우, 또는 Big Ball of Mud 상태의 시스템을 리팩토링 하는 것보다 새로 만드는 것이 더 효율적인 경우가 있다.
