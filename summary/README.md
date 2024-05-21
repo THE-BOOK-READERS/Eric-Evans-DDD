@@ -81,10 +81,10 @@
   - 시스템 버전의 어댑터 패턴 같은 느낌이다.
   
   ### 6. [Open-host Service](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#48-open-host-service)
-  - 상류 팀의 고객인 하류 팀이 다수 존재할 때 상류 팀에서 하류 팀의 요구사항을 수용할 수 있는 API를 만들고 이를 서비스 형태로 공개하여 일관성을 유지할 수 있게 하는 서비스를 말한다.
+  - 업스트림 서비스가 다수의 다운스트림 서비스에 데이터를 제공해야 할 때 유용하게 사용하는 패턴
   - 예를 들어, 상품 도메인이 업스트림이고 추천 도메인, 주문 도메인, 재고 도메인이 다운스트림인 이커머스 시나리오에서 Open-host Service 패턴을 적용해볼 수 있다.
-  - 이떄, 하류 컴포넌트는 상류 서비스의 모델이 자신의 도메인 모델에 영향을 주지 않도록 안티코럽션 계층(Anticorruption Layer)을 활용할 수 있다.
-  <img width="565" alt="스크린샷 2024-05-21 오후 6 47 48" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/10d33083-e002-46a5-b882-b0e3f3d191f1">
+  - 이때, 업스트림과 다운스트림의 관계는 주로 Customer/Supplier Development 관계이다.
+  - 또한, 다운 스트림의 팀은 업스트림의 팀의 모델이 자신의 도메인 모델에 영향을 주지 않도록 안티코럽션 계층(Anticorruption Layer)을 활용할 수 있다.
 
   ### 7. [Separate Ways](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch4.md#410-separate-ways) 
   - Bounded Context들간의 관계가 각자도생의 경우이거나 그러고 싶을 때 사용하는 패턴
@@ -108,7 +108,6 @@
 
 
 ## 5장. 전략적 설계를 위한 Distillation
-
 - 프로젝트에 투입될 수 있는 자원(예 : 시간, 돈, 사람 등)은 한정되어 있다.
 - 따라서, 비즈니스의 핵심 요소([Core Domain](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#52-core-domain))와 그렇지 않은 요소([Generic Subdomains](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch5.md#53-generic-subdomains))를 구별하여 자원을 효율적으로 배분하기 위한 방법이 필요하다.
 - 이럴 때, 핵심 요소를 추출해 내는 것을 `Distillation`이라고 한다.
