@@ -19,30 +19,26 @@
 ### Refactoring Toward Deeper Insight
 
 ## 2장. 모델 주도 설계의 구성 요소
-- 도메인 주도 설계를 효과적으로 구현하기 위해 여러 가지 구성 요소와 패턴을 소개합니다. 
-### 패턴 (Patterns)
-#### 레이어드 아키텍처 (Layered Architecture)
-#### 팩토리 (Factories)
-#### 레포지토리 (Repositories)
-#### 애그리게잇 (Aggregates)
-
-### 구성 요소 (Components)
-#### 엔티티 (Entities)
-#### 값 객체 (Value Objects)
-#### 도메인 이벤트 (Domain Events)
-#### 서비스 (Services)
-#### 모듈 (Modules)
+- 도메인 주도 설계를 효과적으로 구현하기 위해 여러 가지 구성 요소와 패턴이 있다.
+- 여기서, 모든 패턴을 사용해야만 하는 건 아니고, 팀 상황에 맞게 사용하면 좋을 것 같은 것들을 적용시켜보면 좋다.
 
 
-### Layered Architecture
-### Entities 
-### Value Objects
-### Domain Events * 
-### Services 
-### Modules 
-### Aggregates
-### Repositories
-### Factories 
+### 1. 패턴 (Patterns)
+#### (1) 레이어드 아키텍처 (Layered Architecture)
+
+#### (2) 팩토리 (Factories)
+
+#### (3) 레포지토리 (Repositories)
+
+#### (4) 애그리게잇 (Aggregates)
+
+### 2. 구성 요소 (Components)
+#### (1) 엔티티 (Entities)
+#### (2) 값 객체 (Value Objects)
+#### (3) 도메인 이벤트 (Domain Events)
+#### (4) 서비스 (Services)
+#### (5) 모듈 (Modules)
+
 
 ## 3장. 유연한 설계
 ### Intention-Revealing Interfaces 
