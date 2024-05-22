@@ -5,7 +5,7 @@
 - 이런 방법론을 모델 주도 설계([Model-Driven Design](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#15-model-driven-design))라고 한다.
 - 이때, 복잡한 비즈니스 세계를 하나의 덩어리로 만들다 보면, 그 복잡성 또한 증가하게 된다.
 - 따라서, 그렇게 증가하는 복잡성을 해결하기 위해, 도메인에 따라 또는 회사 사정에 따라 쪼갤 수 있는데, 이때 쪼개진 영역을 [Bounded Context](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch1.md#12-bounded-context)라고 부른다.
-- 이는 도메인 모델의 명확한 결계를 설정하여 혼란을 방지할 수 있다.
+- 이는 도메인 모델의 명확한 경계를 설정하여 혼란을 방지할 수 있다.
 - 또한, 동일한 개념이더라도, Bounded Context에 따라 다르게 정의될 수 있다.
 - 예를 들면, 회원이라는 모델을 주문 Bounded Context에서는 주문자로 부르는 반면, QnA Bounded Context에서는 질문자로 부를 수 있다.
 - 또한, 같이 일을 하더라도, 서로 다른 용어를 사용해서 커뮤니테이션 비용을 증가하거나 엉뚱한 기능이 만들어지기도 한다.
