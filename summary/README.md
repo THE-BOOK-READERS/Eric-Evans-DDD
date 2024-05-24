@@ -139,6 +139,11 @@
 #### How (추후에 추가 작성)
 - 
 
+> 서비스 vs 값 객체 vs 엔티티
+> - 상태를 아예 갖지 않는건, `서비스`,
+> - 상태를 가지만, 불변성 있게 관리되는 건, `값 객체`,
+> - 상태를 가지면서도, 가변성 있게 관리되는 건, `엔티티`
+
 
 #### (5) [모듈 (Modules)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#27-modules)
 ##### What
