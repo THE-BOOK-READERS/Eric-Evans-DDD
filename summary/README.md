@@ -25,7 +25,7 @@
 
 
 ### 1. 패턴 (Patterns)
-#### (1) 레이어드 아키텍처 (Layered Architecture)
+#### (1) [레이어드 아키텍처 (Layered Architecture)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#22-layered-architecture)
 ##### What
 - 복잡한 프로그램을 서로 독립저인 계층으로 분리한 아키텍처 스타일.
 
@@ -36,7 +36,7 @@
 - 이때, 각 계층은 응집력 있으면서 아래 레이어에만 의존하게 설계하는 것이 중요하다.
 
 
-#### (2) 팩토리 (Factories)
+#### (2) [팩토리 (Factories)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#210-factories)
 ##### What
 - 객체나 애그리게잇의 생성 로직을 관심사 분리를 통해 따로 관리하고 싶을 때 사용하는 패턴
 
@@ -48,7 +48,7 @@
 - 
 
 
-#### (3) 레포지토리 (Repositories)
+#### (3) [레포지토리 (Repositories)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#29-repositories)
 ##### What
 - 엔티티나 애그리게잇을 저장하고 검색하는 작업을 추상화하는 패턴
 
@@ -59,7 +59,7 @@
 - 
 
 
-#### (4) 애그리게잇 (Aggregates)
+#### (4) [애그리게잇 (Aggregates)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#28-aggregates)
 ##### What
 - 일관성 있는 변경을 보장하기 위해 함께 그룹화된 관련 객체들(예 : 값 객체 또는 엔티티)의 집합
 
@@ -77,7 +77,7 @@
 
 ### 2. 구성 요소 (Components)
 
-#### (1) 엔티티 (Entities)
+#### (1) [엔티티 (Entities)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#23-entities)
 ##### What
 - 도메인 모델에서 고유한 식별자를 가지며, 동일성을 기준으로 구분되는 객체
 - 식별자를 통해 다른 객체와 구분되며, 이는 객체의 속성 값이 변하더라도 동일성을 유지하는 기준이 됩니다.
@@ -92,7 +92,7 @@
 - 
 
 
-#### (2) 값 객체 (Value Objects)
+#### (2) [값 객체 (Value Objects)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#24-value-objects)
 ##### What
 - 값을 표현하는 객체
 - 예를 들어, 주소라는 데이터가 있다고 했을 때, 이걸 그냥 String으로 저장할 수도 있지만, Address라는 클래스로 만들어서 사용할 수도 있다.
@@ -112,7 +112,7 @@
 > - 식별성이 있다면, 엔티티로 만들고, 식별성이 없다면 값 객체로 만들어라.
 
 
-#### (3) 도메인 이벤트 (Domain Events)
+#### (3) [도메인 이벤트 (Domain Events)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#25-domain-events-)
 ##### What
 - 도메인 내에서 발생하는 의미 있는 사건을 나타내는 객체
 - 예를 들어, "주문완료됨" 등의 사건을 도메인 이벤트로 만들 수 있다.
@@ -128,7 +128,7 @@
 - 
 
  
-#### (4) 서비스 (Services)
+#### (4) [서비스 (Services)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#26-services)
 ##### What
 - 도메인 로직을 캡슐화하고 관리하는데 사용하는 객체
 
@@ -140,7 +140,7 @@
 - 
 
 
-#### (5) 모듈 (Modules)
+#### (5) [모듈 (Modules)](https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/blob/main/summary/ch2.md#27-modules)
 ##### What
 - 관련된 도메인 개념을 논리적으로 그룹화하는 방법
 
