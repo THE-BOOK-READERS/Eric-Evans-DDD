@@ -55,9 +55,28 @@ Therefore:
 - 클라이언트 개발자 모드로 사고하도록 강제하기 위해, 그것이 생성하기 전에 동작에 대한 테스트를 작성해라. (-> TDD 하라는 말인가?)
 
 
-
-
 ## 3.3 Side-Effect-Free Functions
+> Interactions of multiple rules or compositions of calculations become extremely difficult to predict. The developer calling an operation must understand its implementation and the implementation of all its delegations in order to anticipate the result. The usefulness of any abstraction of interfaces is limited if the developers are forced to pierce the veil. Without safely predictable abstractions, the developers must limit the combinatory explosion, placing a low ceiling on the richness of behavior that is feasible to build.
+
+- 여러 규칙의 Interactions 또는 계산들의 조합은 예측하기가 극도로 어렵다.
+- 동작을 호출하는 개발자는 결과를 예상하기 위해 그것의 구현 뿐만 아니라 그것의 모든 위임의 구현도 이해해야 한다.
+- 개발자가 베일을 뚫어야 한다면(= 내부 구현을 들여다봐야 한다면), 인터페이스 추상화의 유용성은 제한된다.
+- 안전하게 예측가능한 추상화가 없다면, 개발자는 구축 가능한 행동의 풍부함에 낮은 한계선을 설정놓으면서, 조합의 폭발을 제한해야 한다. 
+
+
+Therefore:
+
+> Place as much of the logic of the program as possible into functions, operations that return results with no observable side effects. Strictly segregate commands (methods which result in modifications to observable state) into very simple operations that do not return domain information. Further control side effects by moving complex logic into value objects when a concept fitting the responsibility presents itself.
+
+- 가능한 한 많은 프로그램 논리를 관찰 가능한 부작용 없는 결과를 반환하는 연산을 가진 함수에 넣어라.
+- 엄격하게 명령(관찰 가능한 상태에 대한 수정을 초래하는 메서드)을 도메인 정보를 반환하지 않는 매우 간단한 동작으로 분리해라.
+- 책임에 맞는 개념이 나타날 때, 복잡한 논리를 값 객체로 옮김으로서, 부작용을 추가로 제어해라.
+
+
+> All operations of a value object should be side-effect-free functions.
+- VO의 모든 동작은 부작용이 없는 함수이어야 한다.
+
+
 ## 3.4 Assertions
 ## 3.5 Standalone Classes
 ## 3.6 Closure of Operations
