@@ -47,8 +47,10 @@ Therefore:
 
 > Name classes and operations to describe their effect and purpose, without reference to the means by which they do what they promise. This relieves the client developer of the need to understand the internals. These names should conform to the ubiquitous language so that team members can quickly infer their meaning. Write a test for a behavior before creating it, to force your thinking into client developer mode.
 
-
-
+- 그들이 약속한 것을 이해하는 수단에 대한 reference 없이도, 그들의 효과와 목적을 설명하기 하도록 클래스와 동작을 네이밍해라. 
+- 이것은 클라이언트 개발자가 내부 구조를 이해할 필요가 없게 한다.
+- 이러한 이름은 팀 구성원들이 그 의미를 빠르게 유추할 수 있도록, 유비쿼터스 언어로 형성되어야 한다.
+- 클라이언트 개발자 모드로 사고하도록 강제하기 위해, 그것이 생성하기 전에 동작에 대한 테스트를 작성해라. (-> TDD 하라는 말인가?)
 
 
 
