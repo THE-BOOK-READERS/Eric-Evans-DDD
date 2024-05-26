@@ -172,5 +172,53 @@ Therefore:
   
 
 ## 3.7 Declarative Design
-## 3.8 Drawing on Established Formalisms
+> There can be no real guarantees in procedural software. To name just one way of evading assertions, code could have additional side effects that were not specifically excluded. No matter how model-driven our design is, we still end up writing procedures to produce the effect of the conceptual interactions. And we spend much of our time writing boilerplate code that doesn’t really add any meaning or behavior. Intention-revealing interfaces and the other patterns in this chapter help, but they can never give conventional object-oriented programs formal rigor.
+
+- 절차적 소프트웨어에서는 실제로 어떤 보증도 할 수 없다.
+- 단언문을 회피하는 한 가지 방법을 꼽자면, 코드에 명시적으로 제외되지 않은, 추가적인 부작용을 가질 수 있다.
+- 우리의 디자인이 아무리 모델 중심적이라 할지라도, 우리는 여전히 개념적 상호 작용의 효과를 생성하기 위해 절차를 작성하게 된다.
+- 그리고 우리는 실제로 의미나 행동을 추가하지 않는, 보일러플레이트 코드를 작성하는 데 많은 시간을 소비한다.
+- 의도를 드러내는 인터페이스와 이 장에서 다루는 다른 패턴들이 도움이 될 수 있지만, 이러한 것들은 전통적인 객체지향 프로그램에 형식적인 엄격함을 줄 수 없다.
+
+
+> These are some of the motivations behind declarative design. This term means many things to many people, but usually it indicates a way to write a program, or some part of a program, as a kind of executable specification. A very precise description of properties actually controls the software. In its various forms, this could be done through a reflection mechanism or at compile time through code generation (producing conventional code automatically, based on the declaration). This approach allows another developer to take the declaration at face value. It is an absolute guarantee.
+
+- 이러한 것들은 선언적 디자인의 동기 중 일부이다.
+- 이 용어는 많은 사람들에게 많은 것을 의미하지만, 일반적으로 프로그램 또는 프로그램의 일부를 일종의 실행 가능한 specification로 작성하는 방법을 나타낸다.
+- 속성에 대해 매우 정확한 설명은 실제로 SW를 제어한다.
+- 이것은 다양한 형태로 코드 생성(선언 기반의 기존 코드를 자동으로 생성하는)을 통해 컴파일 시간에 또는 reflection 메커니즘을 통해 수행될 수 있다.
+- 이 접근법은 다른 개발자가 선언을 그대로 받아들일 수 있게 한다.
+- 이는 절대적인 보증이디.
+
+
+> Many declarative approaches can be corrupted if the developers bypass them intentionally or unintentionally. This is likely when the system is difficult to use or overly restrictive. Everyone has to follow the rules of the framework in order to get the benefits of a declarative program.
+
+- 만약, 개발자가 의도적으로 또는 의도치 않게 그것들을 우회한다면, 많은 선언적 접근 방식은 손상될 수 있다.
+- 이는 시스템을 사용하기 어렵게 하거나 지나치게 제한적인 경우에 발생할 수 있다.
+- 선언적 프로그램의 이점을 얻기 위해, 모든 사람이 프레임워크의 규칙을 따라야 한다.
+
+### A Declarative Style of Design
+> Once your design has intention-revealing interfaces, side-effect-free functions, and assertions, you are edging into declarative territory. Many of the benefits of declarative design are obtained once you have combinable elements that communicate their meaning, and have characterized or obvious effects, or no observable effects at all.
+
+- 일단 너의 설계가 의도를 드러내는 인터페이스, 부작용이 없는 함수, 그리고 단언문을 가지고 있다면, 너는 선언적 영역으로 진입하게 된다.
+- 선언적 디자인의 많은 이점들은 의미를 전달하는 조합 가능한 요소들을 가지거나, 특성화되었거나 명백한 효과를 가지거나 전혀 관찰할 수 없는 효과를 가질 때 얻어집니다.
+
+
+> A supple design can make it possible for the client code to use a declarative style of design. To illustrate, the next section will bring together some of the patterns in this chapter to make the specification more supple and declarative.
+
+- 유연한 디자인은 클라이언트 코드가 선언적인 디자인 스타일을 사용할 수 있도록 만들어 줄 수 있다.
+- 설명을 위해, 다음 섹션에서는 이 장에서 다룬 몇 가지 패턴을 결합하여 명세를 더 유연하고 선언적으로 만들 것이다.
+
+
+## 3.8 Drawing on Established Formalisms(이미 존재하는 형식화된 개념이나 체계를 활용하는 것)
+> Creating a tight conceptual framework from scratch is something you can’t do every day. Sometimes you discover and refine one of these over the course of the life of a project. But you can often use and adapt conceptual systems that are long established in your domain or others, some of which have been refined and distilled over centuries. Many business applications involve accounting, for example. Accounting defines a well-developed set of entities and rules that make for an easy adaptation to a deep model and a supple design.
+
+
+> There are many such formalized conceptual frameworks, but my personal favorite is math. It is surprising how useful it can be to pull out some twist on basic arithmetic. Many domains include math somewhere. Look for it. Dig it out. Specialized math is clean, combinable by clear rules, and people find it easy to understand.
+
+
+> A real-world example, “Shares Math,” was discussed in Chapter 8 of the book, Domain-Driven Design.
+
+
+
 ## 3.9 Conceptual Contours
