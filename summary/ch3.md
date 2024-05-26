@@ -213,12 +213,27 @@ Therefore:
 ## 3.8 Drawing on Established Formalisms(이미 존재하는 형식화된 개념이나 체계를 활용하는 것)
 > Creating a tight conceptual framework from scratch is something you can’t do every day. Sometimes you discover and refine one of these over the course of the life of a project. But you can often use and adapt conceptual systems that are long established in your domain or others, some of which have been refined and distilled over centuries. Many business applications involve accounting, for example. Accounting defines a well-developed set of entities and rules that make for an easy adaptation to a deep model and a supple design.
 
+- 맨 처음부터 탄탄한 개념적 framework를 만드는 것은 매일 할 수 없는 일이다.
+- 때떄로 너는 프로젝트 수명 동안 그것들 중 하나를 발견하고 개선하기도 한다.
+- 그러나, 너는 종종 도메인이나 다른 분야에서 오랫동안 확립된 개념적 시스템을 사용하고 적응할 수 있다.
+- 그 중 일부는 세기 동안 정제되고 정제된 것이다.
+- 예를 들어, 많은 비즈니스 응용 프로그램에는 회계를 포함한다.
+- 회계는 심층 모델과 유연한 설계에 쉽게 적응할 수 있도록 만들어진, 잘 개발된 엔티티와 및 규칙 세트를 정의한다.
+
 
 > There are many such formalized conceptual frameworks, but my personal favorite is math. It is surprising how useful it can be to pull out some twist on basic arithmetic. Many domains include math somewhere. Look for it. Dig it out. Specialized math is clean, combinable by clear rules, and people find it easy to understand.
+
+- 이와 같은 정형화된 개념적 프레임워크가 많이 있지만, 내 개인적인 취향은 수학이다.
+- 기본 산술에 몇 가지 변형을 도입하는 것이 얼마나 유용한지 놀랍다.
+- 많은 도메인은 어디에든 수학을 포함하고 있다.
+- 찾아봐라.
+- 파해쳐봐라.
+- 전문 수학은 명확하고, 명확한 규칙에 따라 결합 가능하며, 사람들이 이해하기 쉽다.
 
 
 > A real-world example, “Shares Math,” was discussed in Chapter 8 of the book, Domain-Driven Design.
 
+- 실제 예로는 "주식 수학"이라는 것이 있습니다. 이는 도메인 주도 설계 책의 8장에서 논의되었습니다.
 
 
 ## 3.9 Conceptual Contours(개념적 윤곽)
