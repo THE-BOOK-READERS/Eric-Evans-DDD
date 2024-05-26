@@ -221,4 +221,44 @@ Therefore:
 
 
 
-## 3.9 Conceptual Contours
+## 3.9 Conceptual Contours(개념적 윤곽)
+> Sometimes people chop functionality fine to allow flexible combination. Sometimes they lump it large to encapsulate complexity. Sometimes they seek a consistent granularity, making all classes and operations to a similar scale. These are oversimplifications that don’t work well as general rules. But they are motivated by basic problems.
+
+- 때때로 사람들은 유연한 조합을 허용하기 위해 기능을 세밀하게 나눈다.
+- 때때로 그들은 복잡성을 캡슐화하기 위해 큰 덩어리로 묶기도 한다.
+- 때때로 그들은 모든 클래스와 operation을 비슷한 규모로 만들기 위해 일관된 세분성을 추구한다.
+- 이러한 것들은 일반적인 규칙으로는 잘 작동하지 않는 과도한 단순화이다.
+- 그러나, 그들은 기본적인 문제들에 의해 동기부여받는다.
+
+
+> When elements of a model or design are embedded in a monolithic construct, their functionality gets duplicated. The external interface doesn’t say everything a client might care about. Their meaning is hard to understand, because different concepts are mixed together.
+
+- 모델이나 디자인의 요소들이 거대한 구조물에 내장되어 있을 때, 그들의 기능성이 중복된다.
+- 외부 인터페이스는 클라이언트가 관심을 갖는 모든 것을 말하지 않는다.
+- 그들의 의미는 다른 개념들이 서로 섞여 있기 때문에 이해하기 어렵다.
+
+
+> Conversely, breaking down classes and methods can pointlessly complicate the client, forcing client objects to understand how tiny pieces fit together. Worse, a concept can be lost completely. Half of a uranium atom is not uranium. And of course, it isn’t just grain size that counts, but just where the grain runs.
+
+- 반면에, 클래스와 메서드를 분해하는 것은 클라이언트 객체가 작은 조각들이 어떻게 서로 결합되어있는지에 대해 이해해도록 강요하면서, 
+- 더 나쁜 경우에는 개념이 완전히 사라질 수 있다는 것이다.
+- 우라늄 원자의 절반은 우라늄이 아니다.
+- 물론, 중요한 것은 입자 크기만이 아니라 입자가 어디를 향해 달리는지가 중요하다.
+
+
+Therefore:
+
+
+> Decompose design elements (operations, interfaces, classes, and aggregates) into cohesive units, taking into consideration your intuition of the important divisions in the domain. Observe the axes of change and stability through successive refactorings and look for the underlying conceptual contours that explain these shearing patterns. Align the model with the consistent aspects of the domain that make it a viable area of knowledge in the first place.
+
+- 도메인 안에서 너의 직관으로 중요한 구분을 고려하여, 설계 요소(작업, 인터페이스, 클래스 및 집합체)를 응집력 있는 단위로 분해해라.
+- 연속적인 리팩토링을 통해, 변화와 안정성의 축을 관찰하고, 이러한 절단 패턴을 설명하는 기저 개념적 윤곽을 찾아라.
+- 처음부터 도메인을 생존가능한 지식 영역으로 만드는 도메인의 일관된 측면과 모델을 일치시켜라.
+
+
+> A supple design based on a deep model yields a simple set of interfaces that combine logically to make sensible statements in the ubiquitous language, and without the distraction and maintenance burden of irrelevant options.
+
+- 깊은 모델을 기반으로 한 유연한 디자인은 일관된 언어로 합리적인 명제를 만들어내는 단순한 인터페이스 세트를 제공하며, 관련 없는 옵션의 혼란과 유지보수 부담 없이 그들을 조합할 수 있습니다.
+- 심층모델을 기반으로 한 유연한 설계는 관련없는 옵션으로 인한 방해나 유지 관리 부담이 없이, 유비쿼터스 언어 내에서 합리적인 설명을 만들기 위해 논린적으로 결합된, 간단한 인터페이스를 제공한다.
+
+
