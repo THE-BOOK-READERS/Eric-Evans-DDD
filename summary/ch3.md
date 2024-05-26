@@ -119,10 +119,58 @@ Therefore:
 <img width="529" alt="스크린샷 2024-05-26 오후 2 32 10" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/fd5fb2a1-131b-4ac5-b6f2-8edb49aa68a3">
 
 
+## 3.5 Standalone Classes(독립형 클래스)
+> Even within a module, the difficulty of interpreting a design increases wildly as dependencies are added. This adds to mental overload, limiting the design complexity a developer can handle. Implicit concepts contribute to this load even more than explicit references.
+
+- 한 모듈 내에서도 의존성이 추가될수록 설계를 해석하는 난이도가 급격하게 증가한다.
+- 이는 정신적 과부하를 가중시켜, 개발자가 처리할 수 있는 설계의 복잡성을 제한한다.
+- 암시적인 개념은 이러한 부담을 명시적인 참조보다 더 많이 준다.
+
+> Low coupling is fundamental to object design. When you can, go all the way. Eliminate all other concepts from the picture. Then the class will be completely self-contained and can be studied and understood alone. Every such self-contained class significantly eases the burden of understanding a module.
+
+- 낮은 결합도는 객체 설계에 기본적입니다.
+- 가능하면 완전히 결합도를 제거해라.
+- 그림에서 다른 개념을 모두 제거해라.
+- 그러면 클래스가 완전히 독립적이 되고 개별적으로 공부하고 이해할 수 있다.
+- 이러한 모든 독립형 클래스는 모듈을 이해하는 부담을 크게 줄어준다.
 
 
-## 3.5 Standalone Classes
 ## 3.6 Closure of Operations
+> Most interesting objects end up doing things that can’t be characterized by primitives alone.
+
+- 대부분의 흥미로운 객체들은 단순한 기본 자료형(primitives)만으로는 완전히 표현할 수 없는 (복잡한) 작업을 수행한다.
+
+<img width="524" alt="스크린샷 2024-05-26 오후 3 17 44" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/0621db7a-0c0b-4178-ba83-328117fb387c">
+
+
+Therefore:
+
+
+> Where it fits, define an operation whose return type is the same as the type of its argument(s). If the implementer has state that is used in the computation, then the implementer is effectively an argument of the operation, so the argument(s) and return value should be of the same type as the implementer. Such an operation is closed under the set of instances of that type. A closed operation provides a high-level interface without introducing any dependency on other concepts.
+
+- 적절한 경우, 반환 유형이 인자의 유형과 동일한 operation을 정의해라.
+- 구현자(-> 특정 메서드를 실행하는 객체)가 계산에 사용되는 상태를 가지고 있다면, 구현자는 사실상 operation의 인자이므로 인자와 반환 값은 구현자와 동일한 유형이어야 합니다.
+- 이러한 operation은 해당 타입의 인스턴스 집합에 대해 닫혀 있다.
+- 닫힌 operation은 다른 개념에 대한 의존성을 도입하지 않고도 고수준의 인터페이스를 제공한다.
+
+
+> This pattern is most often applied to the operations of a value object. Because the life cycle of an entity has significance in the domain, you can’t just conjure up a new one to answer a question. There are operations that are closed under an entity type. You could ask an Employee object for its supervisor and get back another Employee. But in general, entities are not the sort of concepts that are likely to be the result of a computation. So, for the most part, this is an opportunity to look for in the value objects.
+
+- 이 패턴은 주로 값 객체의 작업에 적용된다.
+- 도메인에서 엔티티의 수명이 중요한 의미를 가지기 때문에, 질문에 답하기 위해 새로운 엔티티를 만들 수 없다.
+- 엔티티 유형에 대해 닫힌 operation이 있다.
+- 예를 들어, Employee 객체에게 그것의 감독자를 요청하고, 다른 Employee를 돌려받을 수 있다.
+- 그러나, 일반적으로 엔티티는 계산의 결과가 될 수 있는 일종의 개념이 아니다. 
+- 따라서, 대부분의 경우 이것은 값 객체에서 찾을 수 있는 기회이다.
+
+
+> You sometimes get halfway to this pattern. The argument matches the implementer, but the return type is different, or the return type matches the receiver and the argument is different. These operations are not closed, but they do give some of the advantage of closure, in freeing the mind.
+
+- 너는 때때로 이 패턴의 중간에 도달하기도 한다.
+- 인자가 구현자와 일치하지만 반환 유형이 다르거나, 반환 유형이 수신자와 일치하지만 인자가 다른 경우이다.
+- 이러한 operation은 닫혀 있지 않지만, 마음을 자유롭게 하는 데 있어서 닫힘의 장점 중 일부를 제공한다.
+  
+
 ## 3.7 Declarative Design
 ## 3.8 Drawing on Established Formalisms
 ## 3.9 Conceptual Contours
