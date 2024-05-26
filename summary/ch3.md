@@ -78,6 +78,46 @@ Therefore:
 
 
 ## 3.4 Assertions
+> When the side effects of operations are only defined implicitly by their implementation, designs with a lot of delegation become a tangle of cause and effect. The only way to understand a program is to trace execution through branching paths. The value of encapsulation is lost. The necessity of tracing concrete execution defeats abstraction.
+
+
+
+
+Therefore:
+
+
+> State post-conditions of operations and invariants of classes and aggregates. If assertions cannot be coded directly in your programming language, write automated unit tests for them. Write them into documentation or diagrams where it fits the style of the project’s development process.
+
+- 연산의 사후조건과 클래스와 애그리게이트의 불변 조건을 명시해라.
+- 만약, 이러한 assertions가 너의 프로그래밍 언어에서 직접적으로 코드화할 수 없다면, 그것들을 위해 자동화된 단위 테스트를 작성해라.
+- 그것들을 프로젝트 개발 프로세스의 스타일에 맞는 문서나 다이어그램에 작성해라. 
+
+
+> Seek models with coherent sets of concepts, which lead a developer to infer the intended assertions, accelerating the learning curve and reducing the risk of contradictory code.
+- 학습 곡선을 가속화하면서 모순된 코드의 위험을 줄여주는, 개발자가 의도된 assertions을 추론할 수 있는, 응집력 있는 개념 세트를 가진 모델을 찾아라.
+
+
+> Assertions define contracts of services and entity modifiers. 
+- Assertions은 서비스의 계약과 엔티티 수정자의 계약을 정의한다.
+
+#### 서비스의 계약의 예시
+- 계좌 서비스의 입금 메서드는 입금할 금액이 양수여야 하고, 입금 후 잔액은 증가해야 한다는 조건을 말한다.
+
+#### 엔티티 수정자(= 데이터의 상태를 변경하는 연산을 담당한다)의 계약의 예시
+- 계좌 객체의 출금 메서드는 출금할 금액이 잔액보다 작거나 같아야 하며, 출금 후 금액은 음수가 도지 안항야 한다는 조건을 말한다.
+
+
+> Assertions define invariants on aggregates.
+- Assertions은 애그리게이트의 불변성을 정의한다.
+
+
+> 실무에서는 assert을 잘 사용하지 않는 이유
+- 참고 : https://puleugo.tistory.com/177
+<img width="529" alt="스크린샷 2024-05-26 오후 2 32 10" src="https://github.com/THE-BOOK-READERS/Eric-Evans-DDD/assets/60481383/fd5fb2a1-131b-4ac5-b6f2-8edb49aa68a3">
+
+
+
+
 ## 3.5 Standalone Classes
 ## 3.6 Closure of Operations
 ## 3.7 Declarative Design
