@@ -40,7 +40,9 @@
 ## 3.2 Intention-Revealing Interfaces
 > If a developer must consider the implementation of a component in order to use it, the value of encapsulation is lost. If someone other than the original developer must infer the purpose of an object or operation based on its implementation, that new developer may infer a purpose that the operation or class fulfills only by chance. If that was not the intent, the code may work for the moment, but the conceptual basis of the design will have been corrupted, and the two developers will be working at cross-purposes.
 
-- 
+- 만약, 개발자가 컴포넌트를 사용하기 위해 컴포넌트의 구현을 고려해야 한다면, 캡슐화의 가치는 상실된다. (-> 인터페이스 사용해라!??)
+- 만약, 원래 가발자가 아닌 다른 사람이 구현을 기반으로 객체나 동작을 추론해야 하는 경우, 새로운 개발자는 동작이나 클래스가 충족하는 목적을 우연히로만 추론할 수 있다.
+- 만약, 그것이 의도한 바가 아니었다면, 코드는 당분간 동작할 수 있을지 모르겠지만, 설계의 개념적 기반은 손상되었을 것이며, 두 개발자는 서로 다른 목적으로 작업하게 될 것이다.
 
 Therefore:
 
