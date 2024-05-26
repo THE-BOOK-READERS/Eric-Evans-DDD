@@ -80,7 +80,10 @@ Therefore:
 ## 3.4 Assertions
 > When the side effects of operations are only defined implicitly by their implementation, designs with a lot of delegation become a tangle of cause and effect. The only way to understand a program is to trace execution through branching paths. The value of encapsulation is lost. The necessity of tracing concrete execution defeats abstraction.
 
-
+- operation의 side effect가 그들의 구현에 의해 암묵적으로만 정의될 경우, 많은 위임을 가진 설계는 원인과 결과가 뒤엉키게 된다.
+- 프로그램을 이해하는 유일한 방법은 분기 경로를 통해 실행을 추척하는 것이다.
+- 캡슐화의 가치는 잃어버리게 된다.
+- 구체적인 실행을 추적해야 하는 필요성은 추상화를 무너뜨린다.
 
 
 Therefore:
